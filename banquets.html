@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carlsbad Speech And Debate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="templates/headers/header.css" />
+
+    <style>
+      body {
+        font-family: "Lexend", sans-serif;
+        background-color: white;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden;
+        background: url("https://www.transparenttextures.com/patterns/rough-cloth-light.png");
+      }
+      h1 {
+        color: rgb(255, 255, 255);
+        position: absolute;
+        text-shadow: 0px 0px 20px rgba(130, 0, 230);
+        font-size: 60px;
+        transform: translateX(50vw);
+        translate: -50%;
+        z-index: 3;
+        text-align: center;
+        padding: 0px 20px;
+      }
+      h2 {
+        color: rgb(150, 50, 255);
+        margin: 20px 20px;
+        font-size: 30px;
+        font-weight: bolder;
+        text-align: center;
+      }
+      h3 {
+        color: rgb(8, 8, 8);
+        margin-left: 10px;
+        margin-top: 30px;
+        font-size: 23px;
+        font-weight: normal;
+        text-align: center;
+      }
+      h4 {
+        color: rgb(8, 8, 8);
+        margin: 20px 5vw;
+        font-size: 20px;
+        font-weight: lighter;
+        text-align: center;
+      }
+      a { user-select: none; }
+      .separator {
+        background-color: rgb(150, 50, 255);
+        width: calc(30% + 250px);
+        height: calc(1.5px + 0.1vw);
+        margin: 20px auto;
+        z-index: 1;
+      }
+      .spacer { height: 20px; width: 100%; margin: 0px; }
+      .image-container {
+        background: black;
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .header-image {
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+        object-position: center;
+        opacity: 0.4;
+      }
+      .icon {
+        background: rgb(100, 100, 100);
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+      }
+      .icon:hover { width: 53px; height: 53px; }
+      .purple-button {
+        display: inline-block;
+        margin: 0 auto;
+        background-color: rgb(130, 0, 230);
+        color: white;
+        text-decoration: none;
+        padding: 14px 28px;
+        font-size: 18px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+        box-shadow: 0 0 25px rgba(130, 0, 230, 0.7);
+        text-align: center;
+        line-height: normal;
+        vertical-align: middle;
+      }
+      .purple-button:hover {
+        background-color: rgb(170, 50, 255);
+        transform: scale(1.07);
+        box-shadow: 0 0 15px rgb(170, 50, 255);
+        text-shadow: 0 0 8px white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+
+    <!-- Header Image -->
+    <div class="image-container">
+      <img class="header-image" src="images/headers/img1.png">
+    </div>
+
+    <!-- Header -->
+    <h1 style="top: 200px;">Banquets</h1>
+
+    <!-- Banquets -->
+    <h2>Banquet Program</h2>
+    <div style="text-align: center;">
+      <a href="https://docs.google.com/presentation/d/1dn3LVCkucrL_4AVl_TU549sNqkKqGhkZpJEFtHImPbc/edit?slide=id.p#slide=id.p" class="purple-button">2024-2025 Banquet Book</a>
+    </div>
+    <div class="spacer" style="height: 50px;"></div>
+
+    <script src="templates/headers/header.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        fetch("templates/headers/header.html")
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById("header-placeholder").innerHTML = data;
+            initializeHeader();
+          })
+          .catch(error => console.error('Error loading header:', error));
+      });
+    </script>
+  </body>
+</html>

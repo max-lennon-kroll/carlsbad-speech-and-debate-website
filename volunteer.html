@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carlsbad Speech And Debate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="templates/headers/header.css" />
+    <style>
+      body {
+        font-family: "Lexend", sans-serif;
+        background-color: white;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden;
+        background: url("https://www.transparenttextures.com/patterns/rough-cloth-light.png");
+      }
+
+      .boosters {
+        text-align: center;
+        color: rgb(255, 255, 255);
+        margin-bottom: 40px;
+      }
+
+      .booster-title {
+        text-align: center;
+        color: rgb(160, 36, 255);
+        margin: 0;
+      }
+
+      h1 {
+        color: rgb(255, 255, 255);
+        position: absolute;
+        text-shadow: 0px 0px 20px rgba(130, 0, 230);
+        font-size: 60px;
+        transform: translateX(50vw);
+        translate: -50%;
+        z-index: 3;
+      }
+      h2 {
+        color: rgb(150, 50, 255);
+        margin: 20px 20px;
+        font-size: 30px;
+        font-weight: bolder;
+        text-align: center;
+      }
+      h3 {
+        color: rgb(8, 8, 8);
+        text-align: center;
+        font-size: 23px;
+        font-weight: normal;
+      }
+      h4 {
+        color: rgb(8, 8, 8);
+        margin: 0px 15vw;
+        font-size: 20px;
+        font-weight: lighter;
+        width: 70%;
+        text-align: center;
+      }
+      a { user-select: none; }
+      .separator {
+        background-color: rgb(150, 50, 255);
+        width: calc(30% + 250px);
+        height: calc(1.5px + 0.1vw);
+        margin: 20px auto;
+        z-index: 1;
+      }
+      .spacer { height: 20px; width: 100%; margin: 0px; }
+      .image-container {
+        background: black;
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .header-image {
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+        object-position: center;
+        opacity: 0.4;
+      }
+
+      .bar-button {
+        display: block;
+        text-decoration: none;
+        height: 70px;
+        line-height: 70px;
+        width: 100%;
+        background-color: rgb(130, 0, 230);
+        color: white;
+        padding: 0 0 0 5.5rem;
+        box-sizing: border-box;
+        border-bottom: 2px solid rgb(113, 0, 199);
+        transition: padding-left 0.5s ease-in-out, background-color 0.3s ease-in-out;
+      }
+
+      .bar-button:hover {
+        padding-left: 6rem;
+        background-color: rgb(90, 0, 180);
+      }
+
+      .purple-button {
+        display: inline-block;
+        margin: 10px auto;
+        background-color: rgb(160, 36, 255);
+        color: white;
+        text-decoration: none;
+        padding: 14px 28px;
+        font-size: 18px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+        box-shadow: 0 0 25px rgba(160, 36, 255, 0.7);
+        text-align: center;
+        line-height: normal;
+        vertical-align: middle;
+      }
+      .purple-button:hover {
+        background-color: rgb(196, 17, 255);
+        transform: scale(1.07);
+        box-shadow: 0 0 15px rgb(196, 17, 255);
+        text-shadow: 0 0 8px white;
+      }
+
+      .info-background-strip {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        padding-top: 0;
+        padding-bottom: 30px;
+      }
+
+      .info-section {
+        flex: 1 1 340px;
+        display: flex;
+        padding: 2rem;
+      }
+
+      .info-section.purple-bg {
+        background-color: rgb(100, 0, 180);
+      }
+
+      .info-section.black-bg {
+        background-color: #1a1a1a;
+      }
+
+      .info-plate {
+        border-radius: 15px;
+        padding: 3rem 1.5rem;
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 1rem;
+        min-height: 400px;
+      }
+
+      @media (max-width: 1084px) {
+        .info-plate {
+          margin: 1rem;
+        }
+      }
+
+      .info-plate.black-plate {
+        background-color: #1a1a1a;
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+      }
+
+      .info-plate.purple-plate {
+        background-color: rgb(100, 0, 180);
+        box-shadow: 0 0 25px rgba(160, 36, 255, 0.7);
+      }
+
+      .plate-title {
+        color: white;
+        font-size: 1.6rem; 
+        font-weight: bold;
+        margin: 0;
+        margin-bottom: 1rem;
+      }
+
+      .plate-text {
+        color: white;
+        font-size: 1rem; 
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+        line-height: 1.5;
+      }
+      
+      .info-plate .purple-button {
+        margin: 0.5rem auto; 
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+
+    <!-- Header Image -->
+    <div class="image-container">
+      <img class="header-image" src="images/headers/img1.png">
+    </div>
+
+    <!-- Header -->
+    <h1 style="top: 200px;">Boosters</h1>
+
+    <!-- Volunteering -->
+    <h2>Why Volunteer?</h2>
+    <div class="separator"></div>
+    <h3>Our Purpose</h3>
+    <h4>The purpose of the CHS Speech and Debate Boosters is to promote the charitable and educational purposes of the Carlsbad High School Speech and Debate Team, as well as support the decisions of the coach.</h4>
+    <h3>Volunteer Opportunities</h3>
+    <h4>As they say, "it takes a village." And with a team of over 100 students competing, this is certainly true! Managing a team of this size is a huge undertaking, and we could not make it happen without our parent volunteers. We would love for all of our team members' parents to get involved with the booster club. If you cannot fill a leadership position, please join us at our booster club meetings and stay current on what's happening with our team!<br>
+    <br>We are required to provide judges for every tournament we attend. <strong style="color:rgb(130, 0, 230)">NO EXPERIENCE IS REQUIRED</strong> - we will train you! Most tournaments are on the weekends, making judging and chaperoning easier for working parents.</h4>
+    <h4>If you are interested in helping out, email us at <a href="mailto:Vpadmin@chssdboosters.org">Vpadmin@chssdboosters.org</a>. We also welcome teams of two for any single role.</h4>
+    <h3>Other Ways To Support CHSSD</h3>
+    <h4>We always need and appreciate financial support to help offset tournament fees, NSDA membership fees, travel costs, technology costs, and more to help ensure that we are able to provide opportunities to ALL students. Please consider becoming a CHSSD Patron today. All donations are tax deductible.</h4>
+
+    <div class="spacer"></div>
+
+    <a class="bar-button" href="donate.html">Donate</a>
+    <a class="bar-button" href="contacts.html">Contact Us</a>
+    <a class="bar-button" href="https://www.facebook.com/groups/SpeechDebateBoosters" target="_blank" rel="noopener noreferrer">Booster Facebook</a>
+
+    <div class="info-background-strip">
+      <!-- Section 1: Purple background, Black Plate -->
+      <div class="info-section purple-bg">
+        <div class="info-plate black-plate">
+          <h3 class="plate-title">Tournament Food<br>For Kids</h3>
+          <p class="plate-text">Your food donations are greatly appreciated by students!</p>
+          <a href="https://www.amazon.com/hz/wishlist/dl/invite/PIzGRvtm-HI_t9W51Qc_TjxPGoU6wJ6XHKk-_1Sx07j-8xF7uyVLJtCCFf7Fl1y1RN0uR3Z-Ew47WOirwXa6Ffb1dz7SYeUNA36ZkoA?ref=cm_sw_em_r_un_un_6x9hrd9kzb8wU" class="purple-button">Donate To Students</a>
+        </div>
+      </div>
+
+      <!-- Section 2: Black background, Purple Plate -->
+      <div class="info-section black-bg">
+        <div class="info-plate purple-plate">
+          <h3 class="plate-title">Tournament Food<br>For Hosts</h3>
+          <p class="plate-text">Your donations make the Speech and Debate team possible.</p>
+          <a href="https://docs.google.com/spreadsheets/d/1dzABP32SdxxdQIV28ZkE6oBOzHA070_kJWSd7W4ir7g/edit?gid=0#gid=0" class="purple-button">Donate To Hosts</a>
+        </div>
+      </div>
+
+      <!-- Section 3: Purple background, Black Plate -->
+      <div class="info-section purple-bg">
+        <div class="info-plate black-plate">
+          <h3 class="plate-title">Activities</h3>
+          <p class="plate-text">Donating supplies helps us to foster a great learning environment for our students!</p>
+          <a href="https://lancerwebstore.myschoolcentral.com/(S(ho5ospp1ujmii0q5y1j2ovd5))/Index.aspx#/1/product/728" class="purple-button">Donate To The Team</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Booster Information -->
+    <div style="background-image: linear-gradient(#120016, #170027); padding: 2rem 0; margin-top: -2rem;">
+    <h2>Thanks You Boosters!</h2>
+      <div class="separator"></div>
+      <h3 class="booster-title">President</h3>
+      <h4 class="boosters">Julie Abraham</h4>
+      <h3 class="booster-title">Vice President</h3>
+      <h4 class="boosters">Jen Leo</h4>
+      <h3 class="booster-title">Secretary</h3>
+      <h4 class="boosters">Samantha Noda</h4>
+      <h3 class="booster-title">Treasurer</h3>
+      <h4 class="boosters">Sarah Schexnayder</h4>
+      <h3 class="booster-title">Parent Support</h3>
+      <h4 class="boosters">San San Wardojo</h4>
+    </div>
+
+    <script src="templates/headers/header.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        fetch("templates/headers/header.html")
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById("header-placeholder").innerHTML = data;
+            initializeHeader();
+          })
+          .catch(error => console.error('Error loading header:', error));
+      });
+    </script>
+  </body>
+</html>

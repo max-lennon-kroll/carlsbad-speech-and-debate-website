@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carlsbad Speech And Debate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="templates/headers/header.css" />
+    
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Lexend", sans-serif;
+        background-color: white;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden;
+        background: url("https://www.transparenttextures.com/patterns/rough-cloth-light.png");
+      }
+      h1 {
+        color: rgb(255, 255, 255);
+        position: absolute;
+        text-shadow: 0px 0px 20px rgba(130, 0, 230);
+        font-size: 60px;
+        transform: translateX(50vw);
+        translate: -50%;
+        z-index: 3;
+        text-align: center;
+        padding: 0px 20px;
+      }
+      h2 {
+        color: rgb(150, 50, 255);
+        margin: 20px 20px;
+        font-size: 30px;
+        font-weight: bolder;
+        text-align: center;
+      }
+      h3 {
+        color: rgb(8, 8, 8);
+        margin: 20px 4vw;
+        font-size: 23px;
+        font-weight: normal;
+      }
+      h4 {
+        color: rgb(8, 8, 8);
+        margin: 20px 8vw;
+        font-size: 20px;
+        font-weight: lighter;
+      }
+      a { user-select: none; }
+      .separator {
+        background-color: rgb(150, 50, 255);
+        width: calc(30% + 250px);
+        height: calc(1.5px + 0.1vw);
+        margin: 50px auto;
+        z-index: 1;
+      }
+      .spacer { height: 20px; width: 100%; margin: 0px; }
+      .image-container {
+        background: black;
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .header-image {
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+        object-position: center;
+        opacity: 0.4;
+      }
+      .icon {
+        background: rgb(100, 100, 100);
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+      }
+      .icon:hover { width: 53px; height: 53px; }
+      .purple-button {
+        display: inline-block;
+        margin: 0 auto;
+        background-color: rgb(130, 0, 230);
+        color: white;
+        text-decoration: none;
+        padding: 14px 28px;
+        font-size: 18px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+        box-shadow: 0 0 25px rgba(130, 0, 230, 0.7);
+        text-align: center;
+        line-height: normal;
+        vertical-align: middle;
+      }
+      .purple-button:hover {
+        background-color: rgb(170, 50, 255);
+        transform: scale(1.07);
+        box-shadow: 0 0 15px rgb(170, 50, 255);
+        text-shadow: 0 0 8px white;
+      }
+
+      .table-of-contents {
+        background-color: rgb(130, 0, 230);
+        color: white;
+        padding: 1rem;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .toc-title {
+        color: white;
+        font-weight: 500;
+        font-size: 25px;
+        padding: 0.5rem;
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+      
+      .toc-grid {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 1rem;
+      }
+      
+      .toc-column {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        min-width: 240px;
+        border: 1px solid rgb(80, 0, 150);
+        border-radius: 8px;
+        box-sizing: border-box;
+      }
+
+      .table-of-contents-section {
+        display: block;
+        font-size: 18px;
+        padding: 0.8rem;
+        font-weight: 700;
+        color: white;
+        box-sizing: border-box;
+        background-color: rgba(0, 0, 0, 0.15);
+        transition: background-color 0.2s ease-out;
+        text-align: center;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        border-bottom: 1px solid rgb(80, 0, 150);
+      }
+
+      .table-of-contents-section:hover {
+        background-color: rgb(80, 0, 150);
+      }
+
+      .table-of-contents-event {
+        display: block;
+        font-size: 15px;
+        padding: 0.7rem 1rem;
+        font-weight: 400;
+        color: white;
+        box-sizing: border-box;
+        background-color: rgba(0, 0, 0, 0);
+        transition: background-color 0.2s ease-out;
+      }
+
+      .table-of-contents-event:hover {
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+
+      @media (max-width: 1024px) {
+        .toc-grid {
+          flex-direction: column;
+        }
+      }
+
+      a {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+
+    <!-- Header Image -->
+    <div class="image-container">
+      <img class="header-image" src="images/headers/img1.png">
+    </div>
+
+    <!-- Header -->
+    <h1 style="top: 200px;">Events</h1>
+    <div class="table-of-contents">
+      <div class="toc-title">Table Of Contents</div>
+
+      <div class="toc-grid">
+        
+        <!-- Column 1: Interpretation Events -->
+        <div class="toc-column">
+          <a href="#sec-1" class="table-of-contents-section">INTERPRETATION EVENTS</a>
+          <a href="#DI" class="table-of-contents-event">Dramatic Interpretation - DI</a>
+          <a href="#HI" class="table-of-contents-event">Humerous Interpretation - HI</a>
+          <a href="#POI" class="table-of-contents-event">Programed Oral Interpretation - POI</a>
+          <a href="#DUO" class="table-of-contents-event">Duo Interpretation - DUO</a>
+          <a href="#OI" class="table-of-contents-event">Oracle Interpretation - OI</a>
+          <a href="#DEC" class="table-of-contents-event">Declamation - DEC</a>
+        </div>
+
+        <!-- Column 2: Platform Events -->
+        <div class="toc-column">
+          <a href="#sec-2" class="table-of-contents-section">PLATFORM / ORIGINAL EVENTS</a>
+          <a href="#OO" class="table-of-contents-event">Original Oratory - OO</a>
+          <a href="#OA" class="table-of-contents-event">Original Advocacy - OA</a>
+          <a href="#Expos and Informative" class="table-of-contents-event">Expository - Expos and Informative</a>
+          <a href="#OPP" class="table-of-contents-event">Original Prose and Poetry - OPP</a>
+          <a href="#INFO" class="table-of-contents-event">Informative - INFO</a>
+        </div>
+        
+        <!-- Column 3: Limited Prep Events -->
+        <div class="toc-column">
+          <a href="#sec-3" class="table-of-contents-section">LIMITED PREPARATION EVENTS</a>
+          <a href="#IMP" class="table-of-contents-event">Impromptu - IMP</a>
+          <a href="#NX" class="table-of-contents-event">National Extemp - NX</a>
+          <a href="#IX" class="table-of-contents-event">International Extemp - IX</a>
+        </div>
+        
+        <!-- Column 4: Debate Events -->
+        <div class="toc-column">
+          <a href="#sec-4" class="table-of-contents-section">DEBATE EVENTS</a>
+          <a href="#CONG" class="table-of-contents-event">Congress - CONG</a>
+          <a href="#PARLI" class="table-of-contents-event">Parliamentary - PARLI</a>
+          <a href="#PF" class="table-of-contents-event">Public Forum - PF</a>
+          <a href="#LD" class="table-of-contents-event">Lincoln Douglass - LD</a>
+          <a href="#CX" class="table-of-contents-event">Policy - CX (Team Debate)</a>
+        </div>
+
+      </div>
+      <div class="spacer"></div>
+    </div>
+
+    <h2 id="sec-1">INTERPRETATION EVENTS</h2>
+    <div class="separator"></div>
+    <h4 style="text-align: center;">Budding actors take note! This category involves acting out short "cuttings" from published plays, novels, short stories, and poems. You’re the director casting agent, and actor(s)!  You can perform as one or more characters, and can even sing if you want. Most interp events are performed solo, but this is the only category besides debate that also offers a partner event (Duo). No props, costumes, scenery, or other stage materials are ever allowed. Time limit: 10 minute max, no minimum time, but 8:30+ is suggested.</h4>
+    <h4 style="text-align: center;">As you are writing your pieces, you must keep a copy of all information used while researching the topic, regardless of whether or not it is quoted material.  These must be included in your MLA Works Cited page.  Note that any script turned in without proper MLA format will not be allowed to compete.</h4>
+    <div>
+      <h3 id="DI">DRAMATIC INTERPRETATION - <b style="color: rgb(150, 50, 255)">DI</b></h3>
+      <h4>A ten- minute memorized presentation of a serious or contemplative selection of literature conveyed through character voices, movement, and facial expressions from the student. Examples:  “The Skin Game,” “<i>For Colored Girls…Rainbow Is Enough</i> by N. Shange” or “Bein’ Crazy.</h4>
+      <div class="spacer"></div>
+      <h3 id="HI">HUMOROUS INTERPRETATION - <b style="color: rgb(150, 50, 255)">HI</b></h3>
+      <h4>A ten- minute memorized presentation of a comic or entertaining selection of literature conveyed through character voices, movement, and facial expressions presented by the student.  Author’s intent may be manipulated within reason.  The purpose is to make people laugh.  Examples:  “Snow Sort of White,”  “<i>Horton Hatches the Egg</i> by Dr. Seuss,”  “I Hate My Sister,” or “No More Mr. Funny Guy.”</h4>
+      <div class="spacer"></div>
+      <h3 id="POI">PROGRAMMED ORAL INTERPRETATION - <b style="color: rgb(150, 50, 255)">POI</b></h3>
+      <h4>A ten- minute memorized acting exercise performed by a student who presents published selections tied thematically. Any song, poem, play, novel or literary excerpt may be used in the creation of such an event as this; a minimum of three is required.  Sample Subject: “Amish;” using the song ‘Amish Paradise” by Weird Al Yankovich,  the novel Plain Truth by Jodi Picoult, and Amish Prayer a child book for praying, you create a thematic interpretation.</h4>
+      <div class="spacer"></div>
+      <h3 id="DUO">DUO INTERPRETATION - <b style="color: rgb(150, 50, 255)">DUO</b></h3>
+      <h4>A ten- minute memorized acting exercise performed by two students, from a play, novel, or any piece of literature.  The event presents a <strong>single</strong> selection where each student may present one or more characters. There is no eye contact or touching allowed for any reason during the performance. Examples:  “My Sisters Keeper,” “Dud Wars,” or “Tundra Games.”.</h4>
+      <div class="spacer"></div>
+      <h3 id="OI">ORATORICAL INTERPRETATION - <b style="color: rgb(150, 50, 255)">OI</b></h3>
+      <h4>Choose, memorize, and present a published speech which has been presented by a real person in front of an audience (not one from literature or movies). Student will write an introduction which includes the speaker's name, place, date and purpose of the original speaker's delivery. (You portray your interpretation of the words - this is NOT imitation).<br><i>Recommendation:</i> Choose a speech that speaks to you. It should be inspirational or have a message.</h4>
+      <div class="spacer"></div>
+      <h3 id="DEC">DECLAMATION - <b style="color: rgb(150, 50, 255)">DEC</b></h3>
+      <h4>A ten-minute memorized presentation of a previously delivered, and published, speech.  The aim is to effectively convey the message intended by the original speaker. Examples:  “’I Did Not Have Sex with That Woman’ by Bill Clinton,” “’Equality of Women’ by Sojourner Truth,” “’A Few Lessons From Star Trek:  From a Disabled Community’s Standpoint,’ or “Ten ways not to muck up the world worse than it already is…” by Russell Baker.</h4>
+    </div>
+    <div class="spacer"></div>
+    <h2 id="sec-2">PLATFORM / ORIGINAL EVENTS</h2>
+    <div class="separator"></div>
+    <h4 style="text-align: center;">(1st three are also known as “Platform Speeches”)<br>Do you ever-wish you could change the world? In this category, you speak your mind to do just that! YOU choose a topic, write and present a speech to inspire, inform, persuade, and generally move the minds and/or hearts of your audience.  Time Limit: 10 minute maximum, no minimum time, but 8:30+ is suggested</h4>
+    <div>
+      <h3 id="OO">ORIGINAL ORATORY - <b style="color: rgb(150, 50, 255)">OO</b></h3>
+      <h4>An original persuasive speech on a universal social problem. Student's intent is to arouse a concern and to persuade the reader that there is a significant social ill that must be addressed immediately. The call to action comes from personal, community, state, national and world levels. Some example topics are:  “Apathetic Youth,” “Overmedicated Society,” “Ignorance is Bliss” or the “Blame Game.”</h4>
+      <div class="spacer"></div>
+      <h3 id="OA">ORIGINAL ADVOCACY - <b style="color: rgb(150, 50, 255)">OA</b></h3>
+      <h4>An original persuasive speech including the identification of a problem and the offer of a clear, concise legislative solution on a national or statewide problem.  Examples:  “Banning T-Shirt Slogans,”  “Legalization of Prostitution,” or “Removal of the Insanity Defense,” or “Destroying the Power of Diplomatic Immunity.”</h4>
+      <div class="spacer"></div>
+      <h3 id="Expos and Informative">EXPOSITORY - <b style="color: rgb(150, 50, 255)">Expos and Informative</b></h3>
+      <h4>Write an original speech meant to inform your audience on a topic of your choosing. Research your topic and present information in a creative and engaging way. Winning speeches use creative, often interactive visual aids, and are presented with a component of entertainment and humor.</h4>
+      <div class="spacer"></div>
+      <h3 id="OPP">ORIGINAL PROSE AND POETRY - <b style="color: rgb(150, 50, 255)">OPP</b></h3>
+      <h4>A memorized acting exercise written and performed by the performer.  This event is the culmination of both writing and acting; the student can create any story, one from personal experience, the next movie plot line … literally anything and then tell it to an audience within a ten minute timeline.</h4>
+      <div class="spacer"></div>
+      <h3 id="INFO">INFORMATIVE - <b style="color: rgb(150, 50, 255)">INFO</b></h3>
+      <h4>An original speech that provides information to, rather than persuading, the audience, it is enhanced by the ability to use visual aids as well.  These speeches describe, clarify, illustrate, or define an object, idea, concept, or process.  Examples:  “Pez Dispensers,” “Cannibalism,” “Money,” “Time,” “Trash,” “Left-Handed People,” or “Kissing.”</h4>
+    </div>
+    <div class="spacer"></div>
+    <h2 id="sec-3">LIMITED PREPARATION EVENTS</h2>
+    <div class="separator"></div>
+    <h4 style="text-align: center;">Would you like to become an expert at speaking on the spot? Do you hate doing the same thing over and over? These speeches involve picking three topics out of an envelope, choosing the one topic you like most, and presenting a speech on it with a short preparation time.</h4>
+    <div>
+      <h3 id="IMP">IMPROMPTU - <b style="color: rgb(150, 50, 255)">Imp</b></h3>
+      <h4>A speech presented on a randomly drawn choice of three words, quotations and current events with limited preparation.</h4>
+      <h4><strong>Round 1:</strong>  Concrete Nouns </h4>
+      <h4><strong>Round 2:</strong> Quotation (“If at first you don’t succeed, try, try again”).</h4>
+	    <h4><strong>Round 3:</strong>  Current Event (“Who will win the election this year?”)</h4>
+      <h4><strong>Round 4:</strong>  Abstract concept or vocabulary term (ex: Blue Crayon or Antidisestablishmentarianism).</h4>
+      <h4>Each student is given a (5) minute maximum speaking time; with (2) minutes, in round, preparation time prior to that. No notes may be used during the speech.</h4>
+      <div class="spacer"></div>
+      <h3><strong>EXTEMPORANEOUS - 2 EVENTS</strong></h3>
+      <h3 id="NX">NATIONAL - <b style="color: rgb(150, 50, 255)">National Extemp / NX / USX</b></h3>
+      <h3 id="IX">INTERNATIONAL - <b style="color: rgb(150, 50, 255)">International Extemp / IX</b></h3>
+      <h4>For those of you who know, or want to learn about, current events. Both Extemp events work like Impromptu, except:</h4>
+      <h4>1. The topics are current events - national or international depending on which event you are competing in (NX or IX)</h4>
+      <h4>2. You have 30 minutes to prepare (instead of 2)</h4>
+      <h4>3. You will reference materials during prep, and ideally, mention sources during your speech</h4>
+      <h4>4. The speech is 7 minutes long</h4>
+    </div>
+    <h2 id="sec-4">DEBATE EVENTS</h2>
+    <div class="separator"></div>
+    <h4 style="text-align: center;">Do you you like to argue? Do you enjoy a good intellectual discussion? ​In this category, you build and defend your position and argue your points to make your side to be stronger!</h4>
+    <div>
+      <h3 id="CONG">CONGRESS - <b style="color: rgb(150, 50, 255)">CONG</b></h3>
+      <h4>Here you get to play the part of a Congressperson in the 'houses' of approximately 15 students. Topics are 'bills' or 'resolutions' which are published 2-4 weeks before the competition so everyone can research and prepare. Congresspersons take turns speaking for or against the issue for 3 minutes or less and then field questions from the group for 1 minute.</h4>
+      <div class="spacer"></div>
+      <h3 id="PARLI">PARLIAMENTARY - <b style="color: rgb(150, 50, 255)">PARLI</b></h3>
+      <h4>Based on England's legislative system, this is spontaneous debate for teams of 2. Debate teams get the topics at the competition 20 minutes before speaking in each round. During the tournament you will have 4 debates, each with a new topic and opposing competitors, and compete on both pro and con sides, alternating each round.</h4>
+      <div class="spacer"></div>
+      <h3 id="PF">PUBLIC FORUM - <b style="color: rgb(150, 50, 255)">PF</b></h3>
+      <h4>A partner debate with a new topic each month. Teams research and prepare for both sides of the debate ahead of time to be able to debate both for ('affirmative' / 'aff') and against ('negative'/ 'neg') the topic. Sides are determined by coin flip in each round of competition.</h4>
+      <div class="spacer"></div>
+      <h3 id="LD">LINCOLN DOUGLAS - <b style="color: rgb(150, 50, 255)">LD</b></h3>
+      <h4>This is a one-on-one debate that changes topics every two months. The debate is more of a value debate than the others, meaning the debaters are for and against the issues based on values, such as freedom vs. national security. Competitors research and prepare ahead of time and will debate both for ('affirmative' / 'aff') and against ('negative' / 'neg') the debate topic during each competition.</h4>
+      <div class="spacer"></div>
+      <h3 id="CX">Policy - <b style="color: rgb(150, 50, 255)">CX (Team Debate)</b></h3>
+      <h4>In this most classic and structured of the debate events, there is one topic that is researched and debated for the entire year. This 90 minute, partner debate includes a constructive case, cross-examination, and refutation.</h4>
+    </div>
+    <div class="spacer" style="height: 50px;"></div>
+
+    <!-- Scripts to load and initialize the header -->
+    <script src="templates/headers/header.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        fetch("templates/headers/header.html")
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById("header-placeholder").innerHTML = data;
+            initializeHeader();
+          })
+          .catch(error => console.error('Error loading header:', error));
+      });
+    </script>
+  </body>
+</html>

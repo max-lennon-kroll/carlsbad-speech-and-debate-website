@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carlsbad Speech And Debate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="templates/headers/header.css" />
+    <style>
+      body {
+        font-family: "Lexend", sans-serif;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden;
+        background: url("https://www.transparenttextures.com/patterns/rough-cloth-light.png");
+        background-color: black;
+      }
+      h1 {
+        color: rgb(255, 255, 255);
+        position: absolute;
+        text-shadow: 0px 0px 20px rgba(130, 0, 230);
+        font-size: 60px;
+        transform: translateX(50vw);
+        translate: -50%;
+        z-index: 3;
+      }
+      h2 {
+        color: rgb(150, 50, 255);
+        margin: 20px 20px;
+        font-size: 30px;
+        font-weight: bolder;
+        text-align: center;
+      }
+      h3 {
+        color: rgb(255, 255, 255);
+        margin: 10px 3vw;
+        font-size: 23px;
+        font-weight: normal;
+        text-align: center;
+      }
+      h4 {
+        color: rgb(255, 255, 255);
+        margin: 10px 5vw;
+        font-size: 20px;
+        font-weight: lighter;
+        text-align: center;
+      }
+      a { user-select: none; }
+      .separator {
+        background-color: rgb(150, 50, 255);
+        width: calc(30% + 250px);
+        height: calc(1.5px + 0.1vw);
+        margin: 20px auto;
+        z-index: 1;
+      }
+      .spacer { height: 50px; width: 100%; margin: 0px; }
+      .image-container {
+        background: black;
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .header-image {
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+        object-position: center;
+        opacity: 0.4;
+      }
+      .purple-button {
+        display: inline-block;
+        margin: 10px auto;
+        background-color: rgb(130, 0, 230);
+        color: white;
+        text-decoration: none;
+        padding: 14px 28px;
+        font-size: 18px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+        box-shadow: 0 0 25px rgba(130, 0, 230, 0.7);
+        text-align: center;
+        line-height: normal;
+        vertical-align: middle;
+      }
+      .purple-button:hover {
+        background-color: rgb(170, 50, 255);
+        transform: scale(1.07);
+        box-shadow: 0 0 15px rgb(170, 50, 255);
+        text-shadow: 0 0 8px white;
+      }
+      .icon {
+        background: rgb(100, 100, 100);
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+      }
+      .icon:hover { width: 53px; height: 53px; }
+
+      .info-plate.black-plate {
+        background-color: #1a1a1a;
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+      }
+
+      .info-plate.purple-plate {
+        background-color: rgb(100, 0, 180);
+        box-shadow: 0 0 25px rgba(160, 36, 255, 0.7);
+      }
+
+      .plate-title {
+        color: white;
+        font-size: 1.6rem; 
+        font-weight: bold;
+        margin-top: 0;
+        margin-bottom: 1rem;
+      }
+
+      .plate-text {
+        color: white;
+        font-size: 1rem; 
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+        line-height: 1.5;
+      }
+      
+      .info-plate .purple-button {
+        margin: 0.5rem auto; 
+      }
+
+      .info-background-strip {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+      }
+
+      .info-section {
+        flex: 1 1 340px;
+        display: flex;
+        padding: 0 2rem;
+      }
+
+      .info-section.purple-bg {
+        background-color: rgb(100, 0, 180);
+      }
+
+      .info-section.black-bg {
+        background-color: #1a1a1a;
+      }
+
+      .info-plate {
+        border-radius: 15px;
+        padding: 3rem 1.5rem;
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 4rem 0;
+        min-height: 400px;
+      }
+
+      @media (max-width: 1084px) {
+        .info-plate {
+          margin: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+
+    <!-- Header Image -->
+    <div class="image-container">
+      <img class="header-image" src="images/headers/img1.png">
+    </div>
+
+    <!-- Header -->
+    <h1 style="top: 200px;">Parent Info</h1>
+
+    <!-- Important Competition Dates -->
+    <h2>Parents</h2>
+    <div class="separator"></div>
+    <div class="spacer"></div>
+
+    <div class="info-background-strip">
+      <div class="info-section purple-bg">
+        <div class="info-plate black-plate">
+          <h3 class="plate-title">Want to donate items for the team?</h3>
+          <p class="plate-text">Our students always appreciate your support!</p>
+          <a href="https://www.amazon.com/hz/wishlist/dl/invite/PIzGRvtm-HI_t9W51Qc_TjxPGoU6wJ6XHKk-_1Sx07j-8xF7uyVLJtCCFf7Fl1y1RN0uR3Z-Ew47WOirwXa6Ffb1dz7SYeUNA36ZkoA?ref=cm_sw_em_r_un_un_6x9hrd9kzb8wU" target="_blank" class="purple-button">Food</a>
+
+          <div class="spacer"></div>
+
+          <h3 class="plate-title">Donate funding to support the team</h3>
+          <p class="plate-text">Your donations make this team possible.</p>
+          <a href="donate.html" target="_blank" class="purple-button">Funds</a>
+        </div>
+      </div>
+
+      <div class="info-section black-bg">
+        <div class="info-plate purple-plate">
+          <h3 class="plate-title">Want to become a booster?</h3>
+          <p class="plate-text">Click here!</p>
+          <a href="volunteer.html" class="purple-button">INFO</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="templates/headers/header.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        fetch("templates/headers/header.html")
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById("header-placeholder").innerHTML = data;
+            initializeHeader();
+          })
+          .catch(error => console.error('Error loading header:', error));
+      });
+    </script>
+  </body>
+</html>

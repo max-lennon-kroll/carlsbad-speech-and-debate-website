@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carlsbad Speech And Debate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="templates/headers/header.css" />
+    
+    <style>
+      body {
+        font-family: "Lexend", sans-serif;
+        background-color: white;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden;
+        background-color: #000;
+      }
+      .boosters {
+        text-align: center;
+        color: rgb(150, 50, 255);
+        margin-bottom: 40px;
+      }
+      h1 {
+        color: rgb(255, 255, 255);
+        position: absolute;
+        text-shadow: 0px 0px 20px rgba(130, 0, 230);
+        font-size: 60px;
+        transform: translateX(50vw);
+        translate: -50%;
+        z-index: 3;
+      }
+      h2 {
+        color: rgb(150, 50, 255);
+        margin: 20px 20px;
+        font-size: 30px;
+        font-weight: bolder;
+        text-align: center;
+      }
+      h3 {
+        color: rgb(8, 8, 8);
+        margin: 5px 13vw;
+        margin-top: 30px;
+        font-size: 23px;
+        font-weight: normal;
+      }
+      h4 {
+        color: rgb(8, 8, 8);
+        margin: 0px 15vw;
+        font-size: 20px;
+        font-weight: lighter;
+        width: 70%;
+      }
+      a { user-select: none; }
+      .separator {
+        background-color: rgb(150, 50, 255);
+        width: calc(30% + 250px);
+        height: calc(1.5px + 0.1vw);
+        margin: 20px auto;
+        z-index: 1;
+      }
+      .spacer { height: 20px; width: 100%; margin: 0px; }
+      .image-container {
+        background: black;
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .header-image {
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+        object-position: center;
+        opacity: 0.4;
+      }
+      .icon {
+        background: rgb(100, 100, 100);
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+      }
+      .icon:hover { width: 53px; height: 53px; }
+
+      .purple-button {
+        display: inline-block;
+        margin: 10px auto;
+        background-color: rgb(160, 36, 255);
+        color: white;
+        text-decoration: none;
+        padding: 14px 28px;
+        font-size: 18px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+        box-shadow: 0 0 25px rgba(160, 36, 255, 0.7);
+        text-align: center;
+        line-height: normal;
+        vertical-align: middle;
+      }
+      .purple-button:hover {
+        background-color: rgb(196, 17, 255);
+        transform: scale(1.07);
+        box-shadow: 0 0 15px rgb(196, 17, 255);
+        text-shadow: 0 0 8px white;
+      }
+
+      .info-background-strip {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+      }
+
+      .info-section {
+        flex: 1 1 340px;
+        display: flex;
+        padding: 0 2rem;
+      }
+
+      .info-section.purple-bg {
+        background-color: rgb(100, 0, 180);
+      }
+
+      .info-section.black-bg {
+        background-color: #1a1a1a;
+      }
+
+      .info-plate {
+        border-radius: 15px;
+        padding: 3rem 1.5rem;
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 4rem 0;
+        min-height: 400px;
+      }
+
+      @media (max-width: 1084px) {
+        .info-plate {
+          margin: 1rem;
+        }
+      }
+
+      .info-plate.black-plate {
+        background-color: #1a1a1a;
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+      }
+
+      .info-plate.purple-plate {
+        background-color: rgb(100, 0, 180);
+        box-shadow: 0 0 25px rgba(160, 36, 255, 0.7);
+      }
+
+      .plate-title {
+        color: white;
+        font-size: 1.6rem; 
+        font-weight: bold;
+        margin-top: 0;
+        margin-bottom: 1rem;
+      }
+
+      .plate-text {
+        color: white;
+        font-size: 1rem; 
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+        line-height: 1.5;
+      }
+      
+      .info-plate .purple-button {
+        margin: 0.5rem auto; 
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+
+    <!-- Header Image -->
+    <div class="image-container">
+      <img class="header-image" src="images/headers/img1.png">
+    </div>
+
+    <!-- Header -->
+    <h1 style="top: 200px;">Donate :-)</h1>
+
+    <div class="info-background-strip">
+      <div class="info-section purple-bg">
+        <div class="info-plate black-plate">
+          <h3 class="plate-title">Make An ASB Donation</h3>
+          <p class="plate-text">Thank you!</p>
+          <a href="https://lancerwebstore.myschoolcentral.com/(S(ho5ospp1ujmii0q5y1j2ovd5))/Index.aspx#/1/product/728" class="purple-button">ASB</a>
+        </div>
+      </div>
+
+      <div class="info-section black-bg">
+        <div class="info-plate purple-plate">
+          <h3 class="plate-title">Make A Booster Donation</h3>
+          <p class="plate-text">We always appreciate the help!</p>
+          <a href="https://checkout.square.site/merchant/JM5G9PAQSFXEM/checkout/EICFA27D6LEEGO2336CAWW4P" class="purple-button">BOOSTERS</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="templates/headers/header.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        fetch("templates/headers/header.html")
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById("header-placeholder").innerHTML = data;
+            initializeHeader();
+          })
+          .catch(error => console.error('Error loading header:', error));
+      });
+    </script>
+  </body>
+</html>

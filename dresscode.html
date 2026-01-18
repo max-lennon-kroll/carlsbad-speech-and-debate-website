@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carlsbad Speech And Debate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="templates/headers/header.css" />
+    
+    <style>
+      body {
+        font-family: "Lexend", sans-serif;
+        background-color: white;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden;
+        background: url("https://www.transparenttextures.com/patterns/rough-cloth-light.png");
+      }
+      h1 {
+        color: rgb(255, 255, 255);
+        position: absolute;
+        text-shadow: 0px 0px 20px rgba(130, 0, 230);
+        font-size: 60px;
+        transform: translateX(50vw);
+        translate: -50%;
+        z-index: 3;
+        text-align: center;
+        padding: 0px 20px;
+      }
+      h2 {
+        color: rgb(150, 50, 255);
+        margin: 20px 20px;
+        font-size: 30px;
+        font-weight: bolder;
+        text-align: center;
+      }
+      h3 {
+        color: rgb(8, 8, 8);
+        margin: 10px 5vw;
+        font-size: 23px;
+        font-weight: normal;
+        text-align: center;
+      }
+      h4 {
+        color: rgb(8, 8, 8);
+        margin: 20px 5vw;
+        font-size: 20px;
+        font-weight: lighter;
+        text-align: center;
+      }
+      a { user-select: none; }
+      .separator {
+        background-color: rgb(150, 50, 255);
+        width: 20px;
+        height: 20px;
+        margin: 50px auto;
+        z-index: 1;
+        border-radius: 100px;
+      }
+      .spacer { height: 20px; width: 100%; margin: 0px; }
+      .image-container {
+        background: black;
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .header-image {
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+        object-position: center;
+        opacity: 0.4;
+      }
+      .icon {
+        background: rgb(100, 100, 100);
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+      }
+      .icon:hover { width: 53px; height: 53px; }
+      .purple-button {
+        display: inline-block;
+        margin: 0 auto;
+        background-color: rgb(130, 0, 230);
+        color: white;
+        text-decoration: none;
+        padding: 14px 28px;
+        font-size: 18px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+        box-shadow: 0 0 25px rgba(130, 0, 230, 0.7);
+        text-align: center;
+        line-height: normal;
+        vertical-align: middle;
+      }
+      .purple-button:hover {
+        background-color: rgb(170, 50, 255);
+        transform: scale(1.07);
+        box-shadow: 0 0 15px rgb(170, 50, 255);
+        text-shadow: 0 0 8px white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+
+    <!-- Header Image -->
+    <div class="image-container">
+      <img class="header-image" src="images/headers/img1.png">
+    </div>
+
+    <!-- Header -->
+    <h1 style="top: 200px;">Dress Code</h1>
+    <h2>What To Wear For Tournaments</h2>
+    <h3>All competitors MUST be dressed professionally during the entirety of competition. For virtual tournaments, this means whenever your video is on. Please make sure anything the camera can see is professional attire (and clean backgrounds!). For in person tournaments, this means professional attire all day. A change of shoes to wear between rounds is permitted.</h3>
+    <div class="separator"></div>
+    <div style="display: flex; align-items: center; gap: 20px;">
+      <div style="flex: 1;">
+        <img src="images/all/maledresscode.png" alt="Professional Uniform for Men's Speach and Debate" style="max-width: 100%; height: auto; display: block;">
+      </div>
+      <div style="flex: 2;">
+        <h3>Guys</h3>
+        <h4>Optimally, guys should wear a professional business suit and tie with black/dark socks and dress shoes. A sport coat with a tie and slacks will work also. If you are interested in a pre-owned suit, there are some to select from in the Speech and Debate room that have been outgrown and donated.</h4>
+      </div>
+    </div>
+    <div class="separator"></div>
+    <div style="display: flex; align-items: center; gap: 20px;">
+      <div style="flex: 1;">
+        <img src="images/all/femaledresscode.png" alt="Professional Uniform for Leadies Speach and Debate" style="max-width: 100%; height: auto; display: block;">
+      </div>
+      <div style="flex: 2;">
+        <h3>Ladies</h3>
+        <h4>Ladies should wear professional business attire. A women's business suit (skirt or slacks) works best with a professional blouse, however a conservative dress works also. Please wear professional matching shoes; it is common for the ladies to bring more comfortable shoes for between rounds, and then change into professional shoes before competing.</h4>
+      </div>
+    </div>
+    <div class="separator"></div>
+    <div style="display: flex; align-items: center; gap: 20px;">
+      <div style="flex: 1;">
+        <img src="images/all/adultdresscode.png" alt="Professional Uniform for Parents Speach and Debate" style="max-width: 100%; height: auto; display: block;">
+      </div>
+      <div style="flex: 2;">
+        <h3>Parents</h3>
+        <h4>You do not need to purchase more than one suit for the season! Tournaments run for 2-3 days over the weekend. Typically, for guys, one suit OR one sports coat and one pair of dress slacks, one tie, one pair of dress shoes and 2-3 dress shirts is enough for a tournament weekend. Ladies tend to like more options but similarly only one suit with 2-3 blouses is sufficient. Any additional outfits are completely optional. For in person tournaments, we strongly recommend opting for comfortable heels - they will be wearing them for several hours at a time.</h4>
+      </div>
+    </div>
+    <div class="spacer"></div>
+
+    <script src="templates/headers/header.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        fetch("templates/headers/header.html")
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById("header-placeholder").innerHTML = data;
+            initializeHeader();
+          })
+          .catch(error => console.error('Error loading header:', error));
+      });
+    </script>
+  </body>
+</html>

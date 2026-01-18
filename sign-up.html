@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carlsbad Speech And Debate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="templates/headers/header.css" />
+    
+    <style>
+      body {
+        font-family: "Lexend", sans-serif;
+        background-color: white;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden;
+        background: url("https://www.transparenttextures.com/patterns/rough-cloth-light.png");
+      }
+      h1 {
+        color: rgb(255, 255, 255);
+        position: absolute;
+        text-shadow: 0px 0px 20px rgba(130, 0, 230);
+        font-size: 60px;
+        transform: translateX(50vw);
+        translate: -50%;
+        z-index: 3;
+        text-align: center;
+        padding: 0px 20px;
+      }
+      h2 {
+        color: rgb(150, 50, 255);
+        margin: 20px 20px;
+        font-size: 30px;
+        font-weight: bolder;
+        text-align: center;
+      }
+      h3 {
+        color: rgb(8, 8, 8);
+        margin-left: 10px;
+        margin-top: 30px;
+        font-size: 23px;
+        font-weight: normal;
+        text-align: center;
+      }
+      h4 {
+        color: rgb(8, 8, 8);
+        margin: 20px 5vw;
+        font-size: 20px;
+        font-weight: lighter;
+        text-align: center;
+      }
+      a { user-select: none; }
+      .separator {
+        background-color: rgb(150, 50, 255);
+        width: calc(30% + 250px);
+        height: calc(1.5px + 0.1vw);
+        margin: 20px auto;
+        z-index: 1;
+      }
+      .spacer { height: 20px; width: 100%; margin: 0px; }
+      .image-container {
+        background: black;
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .header-image {
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+        object-position: center;
+        opacity: 0.4;
+      }
+      .icon {
+        background: rgb(100, 100, 100);
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+      }
+      .icon:hover { width: 53px; height: 53px; }
+      .purple-button {
+        display: inline-block;
+        margin: 0 auto;
+        background-color: rgb(130, 0, 230);
+        color: white;
+        text-decoration: none;
+        padding: 14px 28px;
+        font-size: 18px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+        box-shadow: 0 0 25px rgba(130, 0, 230, 0.7);
+        text-align: center;
+        line-height: normal;
+        vertical-align: middle;
+      }
+      .purple-button:hover {
+        background-color: rgb(170, 50, 255);
+        transform: scale(1.07);
+        box-shadow: 0 0 15px rgb(170, 50, 255);
+        text-shadow: 0 0 8px white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+
+    <!-- Header Image -->
+    <div class="image-container">
+      <img class="header-image" src="images/headers/img1.png">
+    </div>
+
+    <!-- Header -->
+    <h1 style="top: 200px;">How do I sign up?</h1>
+
+    <!-- Important Competition Dates -->
+    <h2>Tell us about yourself</h2>
+    <div style="text-align: center;">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeFDY_pxJFFFTcnbQCqxu_BDVkCdVWYEhjiK03tz8IOFIIbtw/viewform?usp=dialog" target="_blank" class="purple-button">New Member Form</a>
+    </div>
+    <div class="separator" style="margin-top: 40px;"></div>
+
+    <!-- Instructions -->
+    <h3>Interested in joining speech and debate?</h3>
+    <h4>Anyone interested in Speech & Debate should fill out the form above AND contact our Coach, Mikendra McCoy at <a href="mailto:mcurtis@carlsbadusd.net">mikendra.mccoy@carlsbadusd.net</a> to get on our email list as soon as possible. You will be notified of any upcoming events, practices and any other pertinent information regarding the team. For advanced speakers, practices begin over the summer. Novice (beginner) practices begin immediately when school starts. Incoming Freshmen should enroll in the Oral Interpretation elective class for the fall to receive the greatest benefit and skill building experience for public speaking and preparation for competition. The competitive season starts in September and runs through the academic year, ending with Nationals in June. As one of the top teams in the country, CHSSD routinely sends competitors to State & National Championship Tournaments.</h4>
+    <div class="separator" style="margin-top: 35px;"></div>
+    
+    <!-- Upcoming events -->
+    <h3>Also take a look at:</h3>
+    <div style="text-align: center;">
+      <a href="https://docs.google.com/document/d/1FVyxc6YWnXNefCDeTzQlkZtwGYpofQecWIYQ-sxcDYM/edit?usp=sharing" target="_blank" class="purple-button">Upcoming Events</a>
+    </div>
+    <div class="spacer" style="height: 50px;"></div>
+
+    <script src="templates/headers/header.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        fetch("templates/headers/header.html")
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById("header-placeholder").innerHTML = data;
+            initializeHeader();
+          })
+          .catch(error => console.error('Error loading header:', error));
+      });
+    </script>
+  </body>
+</html>

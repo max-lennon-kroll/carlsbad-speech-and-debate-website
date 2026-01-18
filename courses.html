@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carlsbad Speech And Debate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="templates/headers/header.css" />
+    
+    <style>
+      body {
+        font-family: "Lexend", sans-serif;
+        background-color: white;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden;
+        background: url("https://www.transparenttextures.com/patterns/rough-cloth-light.png");
+      }
+      h1 {
+        color: rgb(255, 255, 255);
+        position: absolute;
+        text-shadow: 0px 0px 20px rgba(130, 0, 230);
+        font-size: 60px;
+        transform: translateX(50vw);
+        translate: -50%;
+        z-index: 3;
+      }
+      h2 {
+        color: rgb(150, 50, 255);
+        margin: 20px 20px;
+        font-size: 30px;
+        font-weight: bolder;
+        text-align: center;
+      }
+      h3 {
+        color: rgb(8, 8, 8);
+        margin-left: 10px;
+        margin-top: 30px;
+        font-size: 23px;
+        font-weight: normal;
+      }
+      h4 {
+        color: rgb(8, 8, 8);
+        margin: 20px 20px;
+        font-size: 20px;
+        font-weight: lighter;
+        width: 80%;
+      }
+      a { user-select: none; }
+      .separator {
+        position: absolute;
+        background-color: rgb(150, 50, 255);
+        width: calc(30% + 250px);
+        height: calc(1.5px + 0.1vw);
+        top: 580px;
+        z-index: 1;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .spacer { height: 20px; width: 100%; margin: 0px; }
+      .image-container {
+        background: black;
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .header-image {
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+        object-position: center;
+        opacity: 0.4;
+      }
+      .icon {
+        background: rgb(100, 100, 100);
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+      }
+      .icon:hover { width: 53px; height: 53px; }
+    </style>
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+
+    <!-- Header Image -->
+    <div class="image-container">
+      <img class="header-image" src="images/headers/img1.png">
+    </div>
+
+    <!-- Header -->
+    <h1 style="top: 200px;">Courses</h1>
+
+    <!-- Our Courses -->
+    <h2 style="margin-bottom: 80px;">Our Courses</h2>
+    <div class="separator"></div>
+    <h3>Oral Interpretation</h3>
+    <h4>Also known as “Beginning Speech and Debate,” this course concentrates on the development, improvement, and practice  of public speaking, acting, and argumentation skills. Students discuss current events, practice research and writing skills,  and deliver presentations including prepared speaking, as well as impromptu (on-the-spot) and short-preparation  speaking situations, including debates. These activities are designed to improve abilities and confidence in all aspects of  public presentation. <strong style="color: rgb(150, 50, 255)">This class is required to be on the Carlsbad Speech and Debate team.</strong></h4>
+    <h3>Advanced Speaking</h3>
+    <h4>This course offers extensive exploration of persuasive and informative public speaking as well as the interpretation of  literature. Students will study and practice writing and delivery techniques of various types of speeches in preparation for  their own presentations with the goal of competing on the CHS Speech and Debate Team. Competition on the team is used for performance finals throughout the class.</h4>
+    <h3>Advanced Debating</h3>
+    <h4>This course offers extensive study of style and skills for argumentation, research, critical thinking along with current  events. Students participate in extemporaneous speaking and specific types of debate: Public Forum, Parliamentary,  Lincoln Douglas and Congressional Debate with the goal of competing on the CHS Speech and Debate Team.  Competition on the team is used for performance finals throughout the class.</h4>
+    <h2>Have any questions?</h2>
+    <h3 style="text-align: center;">Contact Ms. McCoy at: mikendra.mccoy@carlsbadusd.net</h3>
+
+    <script src="templates/headers/header.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        fetch("templates/headers/header.html")
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById("header-placeholder").innerHTML = data;
+            initializeHeader();
+          })
+          .catch(error => console.error('Error loading header:', error));
+      });
+    </script>
+  </body>
+</html>

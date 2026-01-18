@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carlsbad Speech And Debate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="templates/headers/header.css" />
+
+    <style>
+      body {
+        font-family: "Lexend", sans-serif;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden;
+        background: url("https://www.transparenttextures.com/patterns/rough-cloth-light.png");
+        background-color: rgb(5, 5, 5);
+      }
+
+      .nav-container .header-hamburger-menu span {
+        background-color: white;
+      }
+
+      h2 {
+        color: rgb(150, 50, 255);
+        font-size: 30px;
+        font-weight: bolder;
+        text-align: center;
+      }
+      h3 {
+        color: rgb(8, 8, 8);
+        margin-left: 10px;
+        margin-top: 30px;
+        font-size: 23px;
+        font-weight: normal;
+        text-align: center;
+      }
+      h4 {
+        color: rgb(8, 8, 8);
+        margin: 20px 5vw;
+        font-size: 20px;
+        font-weight: lighter;
+        text-align: center;
+      }
+      a { user-select: none; }
+      .background-image-container {
+        position: relative;
+        top: 4rem;
+        left: 0;
+        width: 100%;
+        height: 56.25vw; /* 16:9 Aspect Ratio */
+        min-height: 300px;
+        overflow: hidden;
+        user-select: none;
+      }
+      .background-image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+      }
+      .main-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(130, 0, 230);
+        opacity: 0.3;
+        z-index: 1;
+      }
+      .separator {
+        background-color: rgb(150, 50, 255);
+        width: calc(30% + 250px);
+        height: calc(1.5px + 0.1vw);
+        margin: 20px auto;
+        z-index: 1;
+      }
+      .spacer { height: 20px; width: 100%; margin: 0px; }
+      .description {
+        color: black;
+        font-size: larger;
+        margin: 30px 30px;
+      }
+      .main-title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -150%);
+        width: 100%;
+        text-align: center;
+        color: white;
+        font-size: clamp(2.5rem, 8vw, 7rem);
+        font-weight: 300;
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+        z-index: 2;
+        white-space: nowrap;
+        user-select: none;
+        transition: none;
+        opacity: 1;
+      }
+      .sub-title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -90%);
+        width: 100%;
+        text-align: center;
+        color: white;
+        font-size: clamp(1rem, 3.5vw, 6rem);
+        font-weight: 300;
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+        z-index: 2;
+        white-space: nowrap;
+        user-select: none;
+        transition: none;
+        opacity: 1;
+      }
+      .glowing-purple-text {
+        position: absolute;
+        bottom: 3rem; 
+        left: 50%;
+        color: rgb(130, 0, 230);
+        text-shadow: 0 0 15px rgb(150, 50, 255);
+        z-index: 2;
+        font-size: clamp(2rem, 5vw, 4rem);
+        font-weight: bold;
+        white-space: nowrap;
+        opacity: 0;
+        transform: translate(-50%, 20px);
+        transition: opacity 0.8s ease-out 0.2s, transform 0.8s ease-out 0.2s;
+      }
+      .glowing-purple-text.is-visible {
+        opacity: 1;
+        transform: translate(-50%, 0);
+      }
+      .purple-button {
+        display: inline-block;
+        margin: 10px auto;
+        background-color: rgb(160, 36, 255);
+        color: white;
+        text-decoration: none;
+        padding: 14px 28px;
+        font-size: 18px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+        box-shadow: 0 0 25px rgba(160, 36, 255, 0.7);
+        text-align: center;
+        line-height: normal;
+        vertical-align: middle;
+      }
+      .purple-button:hover {
+        background-color: rgb(196, 17, 255);
+        transform: scale(1.07);
+        box-shadow: 0 0 15px rgb(196, 17, 255);
+        text-shadow: 0 0 8px white;
+      }
+
+      .info-background-strip {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }
+
+      .info-section {
+        flex: 1 1 340px;
+        display: flex;
+        padding: 2rem;
+      }
+
+      .info-section.purple-bg {
+        background-color: rgb(100, 0, 180);
+      }
+
+      .info-section.black-bg {
+        background-color: #1a1a1a;
+      }
+
+      .info-plate {
+        border-radius: 15px;
+        padding: 3rem 1.5rem;
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 1rem;
+        min-height: 400px;
+      }
+
+      @media (max-width: 1084px) {
+        .info-plate {
+          margin: 1rem;
+        }
+      }
+
+      .info-plate.black-plate {
+        background-color: #1a1a1a;
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+      }
+
+      .info-plate.purple-plate {
+        background-color: rgb(100, 0, 180);
+        box-shadow: 0 0 25px rgba(160, 36, 255, 0.7);
+      }
+
+      .plate-title {
+        color: white;
+        font-size: 1.6rem; 
+        font-weight: bold;
+        margin-top: 0;
+        margin-bottom: 1rem;
+      }
+
+      .plate-text {
+        color: white;
+        font-size: 1rem; 
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+        line-height: 1.5;
+      }
+      
+      .info-plate .purple-button {
+        margin: 0.5rem auto; 
+      }
+    </style>
+
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+
+    <!-- Background Image Container -->
+    <div class="background-image-container" id="backgroundImageContainer">
+      <img src="images/all/image-gallery/img7.jpg" alt="Carlsbad High School Speech And Debate Team" />
+      <div class="main-content" id="mainContentOverlay"></div>
+      <h1 class="main-title" id="mainTitle">Speech and Debate</h1>
+      <h2 class="sub-title">Carlsbad High School</h2>
+    </div>
+
+    <div class="info-background-strip" style="padding-top: 4rem;">
+      <!-- Section 1: Purple background, Black Plate -->
+      <div class="info-section purple-bg">
+        <div class="info-plate black-plate">
+          <h3 class="plate-title">Join Our Team</h3>
+          <p class="plate-text">Are you a student interested in joining the Carlsbad Speech and Debate team?</p>
+          <a href="sign-up.html" class="purple-button">Sign Up</a>
+          <a href="sign-up.html" class="purple-button">Join Our Band</a>
+        </div>
+      </div>
+
+      <!-- Section 2: Black background, Purple Plate -->
+      <div class="info-section black-bg">
+        <div class="info-plate purple-plate">
+          <h3 class="plate-title">Judging</h3>
+          <p class="plate-text">Are you a community member, parent, ect. wanting to judge?</p>
+          <a href="instructions.html" class="purple-button">Judge Instructions</a>
+        </div>
+      </div>
+
+      <!-- Section 3: Purple background, Black Plate -->
+      <div class="info-section purple-bg">
+        <div class="info-plate black-plate">
+          <h3 class="plate-title">Get In Touch</h3>
+          <p class="plate-text">Feel free to contact us if you have any questions!</p>
+          <a href="contacts.html" class="purple-button">Contact Us</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="spacer" style="height: 50px;"></div>
+    <div style="color: rgb(150, 50, 255); font-size: 100px; margin: 0px 5vw; text-shadow: 0px 0px 20px rgb(160, 36, 255);">"</div>
+    <h2 style="color:rgb(255, 255, 255); margin: 0px 10vw;">... where the words are crying to be heard, we must each of us recognize our responsibility to seek those words out, to read them and share them and examine them in their pertinence to our lives.<br>- Audre Lorde</h2>
+    <div style="color: rgb(150, 50, 255); font-size: 100px; margin: 0px 5vw; text-align: right; text-shadow: 0px 0px 20px rgb(160, 36, 255);">"</div>
+    <div class="separator"></div>
+
+    <script src="templates/headers/header.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        fetch("templates/headers/header.html")
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById("header-placeholder").innerHTML = data;
+            initializeHeader(); 
+          })
+          .catch(error => console.error('Error loading header:', error));
+      });
+    </script>
+  </body>
+</html>

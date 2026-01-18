@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Carlsbad Speech And Debate</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="templates/headers/header.css" />
+
+    <style>
+      body {
+        font-family: "Lexend", sans-serif;
+        background-color: white;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden;
+        background: url("https://www.transparenttextures.com/patterns/rough-cloth-light.png");
+      }
+
+      h1 {
+        color: rgb(255, 255, 255);
+        position: absolute;
+        text-shadow: 0px 0px 20px rgba(130, 0, 230);
+        font-size: 60px;
+        transform: translateX(50vw);
+        translate: -50%;
+        z-index: 3;
+        text-align: center;
+        padding: 0px 20px;
+      }
+
+      h2 {
+        color: rgb(150, 50, 255);
+        margin: 20px 20px;
+        font-size: 30px;
+        font-weight: bolder;
+        text-align: center;
+      }
+
+      h3 {
+        color: rgb(8, 8, 8);
+        margin: 20px 10vw;
+        font-size: 23px;
+        font-weight: normal;
+        text-align: center;
+      }
+
+      h4 {
+        color: rgb(8, 8, 8);
+        margin: 20px 10vw;
+        font-size: 20px;
+        font-weight: lighter;
+        text-align: center;
+      }
+
+      a {
+        user-select: none;
+      }
+
+      .separator {
+        background-color: rgb(150, 50, 255);
+        width: calc(30% + 250px);
+        height: calc(1.5px + 0.1vw);
+        margin: 20px auto;
+        z-index: 1;
+      }
+
+      .spacer {
+        height: 20px;
+        width: 100%;
+        margin: 0px;
+      }
+
+      .image-container {
+        background: black;
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .header-image {
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+        object-position: center;
+        opacity: 0.4;
+      }
+
+      /* Icons */
+      .icon {
+        background: rgb(100, 100, 100);
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        transition: width 0.3s ease-in-out,
+                    height 0.3s ease-in-out;
+      }
+
+      .icon:hover {
+        width: 53px;
+        height: 53px;
+      }
+
+      .purple-button {
+        display: inline-block;
+        background-color: rgb(130, 0, 230);
+        color: white;
+        text-decoration: none;
+        margin: 20px;
+        padding: 14px 28px;
+        font-size: 18px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition:
+          background-color 0.4s ease,
+          transform 0.4s ease,
+          box-shadow 0.4s ease;
+        box-shadow: 0 0 25px rgba(130, 0, 230, 0.7);
+        text-align: center;
+        line-height: normal;
+        white-space: nowrap;
+      }
+
+      .purple-button:hover {
+        background-color: rgb(170, 50, 255);
+        transform: scale(1.07);
+        box-shadow: 0 0 15px rgb(170, 50, 255);
+        text-shadow: 0 0 8px white;
+      }
+
+      .button-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <div id="header-placeholder"></div>
+
+    <!-- Header Image -->
+    <div class="image-container">
+      <img class="header-image" src="images/headers/img1.png">
+    </div>
+
+    <!-- Header -->
+    <h1 style="top: 200px;">Cover Sheets</h1>
+
+    <!-- Monthly Calendar Google Doc -->
+    <h2>CHSSA Cover Sheets</h2>
+    <h3>Click the box to complete the fill-in pdf for each event. Print the first page, and both the competitor and parent sign in ink. Hand in to Mrs. McCoy, who will get the administrator's signature.</h3>
+    <h3><br><b>PLEASE make sure you meet ALL requirements of the event before submitting!</b></h3>
+
+    <div class="spacer"></div>
+
+    <div class="button-container">
+      <a href="http://www.chssa.org/wp-content/uploads/2019/12/DI-HI.pdf" class="purple-button">HI / DI</a>
+      <a href="http://www.chssa.org/wp-content/uploads/2019/12/Duo.pdf" class="purple-button">DUO</a>
+      <a href="http://www.chssa.org/wp-content/uploads/2019/12/OPP.pdf" class="purple-button">OPP</a>
+      <a href="http://www.chssa.org/wp-content/uploads/2019/12/POI.pdf" class="purple-button">POI</a>
+      <a href="http://www.chssa.org/wp-content/uploads/2019/12/OI.pdf" class="purple-button">OI</a>
+      <a href="http://www.chssa.org/wp-content/uploads/2019/12/OA.pdf" class="purple-button">Advocacy</a>
+      <a href="http://www.chssa.org/wp-content/uploads/2019/12/Expos.pdf" class="purple-button">Expository</a>
+      <a href="http://www.chssa.org/wp-content/uploads/2019/12/OO.pdf" class="purple-button">Oratory</a>
+    </div>
+
+    <div class="spacer" style="height: 50px;"></div>
+
+    <script src="templates/headers/header.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const headerPlaceholder = document.getElementById("header-placeholder");
+        fetch("templates/headers/header.html")
+          .then(response => response.text())
+          .then(data => {
+            headerPlaceholder.innerHTML = data;
+            initializeHeader(); 
+          })
+          .catch(error => console.error('Error loading header:', error));
+      });
+    </script>
+  </body>
+</html>

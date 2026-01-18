@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carlsbad Speech And Debate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&display=swap" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="templates/headers/header.css" />
+    <style>
+      body {
+        font-family: "Lexend", sans-serif;
+        background-color: white;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden;
+        background: url("https://www.transparenttextures.com/patterns/rough-cloth-light.png");
+      }
+
+      h1 {
+        color: rgb(255, 255, 255);
+        position: absolute;
+        text-shadow: 0px 0px 20px rgba(130, 0, 230);
+        font-size: 60px;
+        transform: translateX(50vw);
+        translate: -50%;
+        z-index: 3;
+        text-align: center;
+        padding: 0px 20px;
+      }
+
+      h2 {
+        color: rgb(150, 50, 255);
+        margin: 20px 20px;
+        font-size: 30px;
+        font-weight: bolder;
+        text-align: center;
+      }
+
+      h3 {
+        color: rgb(8, 8, 8);
+        margin-left: 10px;
+        margin-top: 30px;
+        font-size: 23px;
+        font-weight: bolder;
+        text-align: center;
+      }
+
+      h4 {
+        color: rgb(8, 8, 8);
+        margin: 0px 10vw;
+        font-size: 20px;
+        font-weight: lighter;
+        text-align: center;
+      }
+
+      a { user-select: none; }
+      .separator {
+        background-color: rgb(150, 50, 255);
+        width: calc(30% + 250px);
+        height: calc(1.5px + 0.1vw);
+        margin: 20px auto;
+        z-index: 1;
+      }
+      .spacer { height: 20px; width: 100%; margin: 0px; }
+      .image-container {
+        background: black;
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .header-image {
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+        object-position: center;
+        opacity: 0.4;
+      }
+      .icon {
+        background: rgb(100, 100, 100);
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+      }
+      .icon:hover { width: 53px; height: 53px; }
+      .purple-button {
+        display: inline-block;
+        margin: 0 auto;
+        background-color: rgb(130, 0, 230);
+        color: white;
+        text-decoration: none;
+        padding: 14px 28px;
+        font-size: 18px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+        box-shadow: 0 0 25px rgba(130, 0, 230, 0.7);
+        text-align: center;
+        line-height: normal;
+        vertical-align: middle;
+      }
+      .purple-button:hover {
+        background-color: rgb(170, 50, 255);
+        transform: scale(1.07);
+        box-shadow: 0 0 15px rgb(170, 50, 255);
+        text-shadow: 0 0 8px white;
+      }
+
+      .term-sections {
+        font-size: 28;
+        font-weight: normal;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <div id="header-placeholder"></div>
+
+    <!-- Header Image -->
+    <div class="image-container">
+      <img class="header-image" src="images/headers/img1.png">
+    </div>
+
+    <!-- Header -->
+    <h1 style="top: 200px;">Glossary</h1>
+
+    <!-- Competition Terms -->
+    <h2>Glossary of Common Speech & Debate Terms</h2>
+
+    <!-- Sections -->
+    <h3>Break / Breaking</h3>
+    <h4>Moving forward in a tournament in any competition round past the preliminary rounds.</h4>
+    <div class="spacer"></div>
+
+    <h3>Double Entry</h3>
+    <h4>In Speech events (IEs), it's common for students to compete in more than one event. This is known as double entry. IEs are broken into an A group of events and a B group of events. These events are intentionally scheduled so that double entry speakers can compete in one from each group, alternating between them throughout the rounds.</h4>
+    <div class="spacer"></div>
+    <h3>Paradigm</h3>
+    <h4>Each judge has a 'paradigm' posted on Tabroom that describes their judging philosophy. CHSSD parents will be trained on how to post their paradigm before they judge their first tournament. Paradigms help competitors prepare for a round once their judges are assigned.</h4>
+    <div class="spacer"></div>
+    <h3>Postings</h3>
+    <h4>List of speaker order / debate pairings in any competition round. Postings let speakers know where and when they need to report for their event, as well as if they have advanced or “broken” past preliminary rounds.<br><br>For in person tournaments, hard copies of postings are taped up in a central location once judge ballots are manually tabulated. For virtual tournaments, postings are released on the Tabroom website.</h4>
+    <div class="spacer"></div>
+    <h3>Rounds</h3>
+    <h4>Each tournament consists of a series of preliminary and elimination rounds. Every student participates in the preliminary rounds (number varies depending on size and type of tournament, but typically a minimum of 2 for League Tournaments). Elimination rounds (e.g. quarterfinals, semi-finals, etc.) are single elimination rounds that result in a final winner in each event.</h4>
+    <div class="spacer"></div>
+    <h3>Novice</h3>
+    <h4>A novice is a student in ANY GRADE without prior interscholastic speech tournament experience. Students who have competed in 1 or 2 invitational tournaments that occur after the California State Finals are also novices. A student with speech experience, but no prior experience in debate or Congress will be considered a novice for Policy or LD, Parli, and PF debate.</h4>
+    <div class="spacer"></div>
+    <h3>Varsity Speaker / Debator</h3>
+    <h4>A varsity speaker is a student who has competed in any interscholastic speech league tournament in a previous school year, with the exception of any and all service club contests.<br><br>A varsity Policy, Parliamentary or Public Forum debate team must have at least one varsity debater.</h4>
+    <div class="spacer" style="height: 50px;"></div>
+
+    <script src="templates/headers/header.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        fetch("templates/headers/header.html")
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById("header-placeholder").innerHTML = data;
+            initializeHeader();
+          })
+          .catch(error => console.error('Error loading header:', error));
+      });
+    </script>
+  </body>
+</html>

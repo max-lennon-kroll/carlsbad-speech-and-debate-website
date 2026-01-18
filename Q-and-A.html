@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carlsbad Speech And Debate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="templates/headers/header.css" />
+    
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Lexend", sans-serif;
+        background-color: white;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden;
+        background: url("https://www.transparenttextures.com/patterns/rough-cloth-light.png");
+      }
+      h1 {
+        color: rgb(255, 255, 255);
+        position: absolute;
+        text-shadow: 0px 0px 20px rgba(130, 0, 230);
+        font-size: 60px;
+        transform: translateX(50vw);
+        translate: -50%;
+        z-index: 3;
+        text-align: center;
+        padding: 0px 20px;
+      }
+      h2 {
+        color: rgb(150, 50, 255);
+        margin: 20px 4vw;
+        font-size: 30px;
+        font-weight: bolder;
+        text-align: center;
+      }
+      h3 {
+        color: rgb(100, 0, 180);
+        margin: 30px 3vw;
+        font-size: 28px;
+        font-weight: bolder;
+      }
+      h4 {
+        color: rgb(0, 0, 0);
+        margin: 0px 7vw;
+        font-size: 20px;
+        font-weight: normal;
+      }
+      a { user-select: none; }
+      .separator {
+        background-color: rgb(150, 50, 255);
+        width: calc(30% + 250px);
+        height: calc(1.5px + 0.1vw);
+        margin: 20px auto;
+        z-index: 1;
+      }
+      .spacer { height: 50px; width: 100%; margin: 0px; }
+      .image-container {
+        background: black;
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .header-image {
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+        object-position: center;
+        opacity: 0.4;
+      }
+      .icon {
+        background: rgb(100, 100, 100);
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+      }
+      .icon:hover { width: 53px; height: 53px; }
+      .purple-button {
+        display: inline-block;
+        margin: 0 auto;
+        background-color: rgb(130, 0, 230);
+        color: white;
+        text-decoration: none;
+        padding: 14px 28px;
+        font-size: 18px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+        box-shadow: 0 0 25px rgba(130, 0, 230, 0.7);
+        text-align: center;
+        line-height: normal;
+        vertical-align: middle;
+      }
+      .purple-button:hover {
+        background-color: rgb(170, 50, 255);
+        transform: scale(1.07);
+        box-shadow: 0 0 15px rgb(170, 50, 255);
+        text-shadow: 0 0 8px white;
+      }
+
+      .table-of-contents {
+        background-color: rgb(130, 0, 230);
+        color: white;
+        padding: 1rem;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .toc-title {
+        color: white;
+        font-weight: 500;
+        font-size: 25px;
+        padding: 0.5rem;
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+      
+      .toc-grid {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 1rem;
+      }
+      
+      .toc-column {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        min-width: 240px;
+        border: 1px solid rgb(80, 0, 150);
+        border-radius: 8px;
+        box-sizing: border-box;
+      }
+
+      .table-of-contents-section {
+        display: block;
+        font-size: 18px;
+        padding: 0.8rem;
+        font-weight: 700;
+        color: white;
+        box-sizing: border-box;
+        background-color: rgba(0, 0, 0, 0.15);
+        transition: background-color 0.2s ease-out;
+        text-align: center;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        border-bottom: 1px solid rgb(80, 0, 150);
+      }
+
+      .table-of-contents-section:hover {
+        background-color: rgb(80, 0, 150);
+      }
+
+      .table-of-contents-event {
+        display: block;
+        font-size: 15px;
+        padding: 0.7rem 1rem;
+        font-weight: 400;
+        color: white;
+        box-sizing: border-box;
+        background-color: rgba(0, 0, 0, 0);
+        transition: background-color 0.2s ease-out;
+      }
+
+      .table-of-contents-event:hover {
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+
+      @media (max-width: 1024px) {
+        .toc-grid {
+          flex-direction: column;
+        }
+      }
+
+      a {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+
+    <!-- Header Image -->
+    <div class="image-container">
+      <img class="header-image" src="images/headers/img1.png">
+    </div>
+
+    <!-- Header -->
+    <h1 style="top: 200px;">Q & A</h1>
+
+    <div class="table-of-contents">
+      <div class="toc-title">Table Of Contents</div>
+      <div class="toc-grid">
+        <!-- Column 1: General -->
+        <div class="toc-column">
+          <a href="#sec-1" class="table-of-contents-section">General</a>
+          <a href="#q1" class="table-of-contents-event">What are the benefits?</a>
+          <a href="#q2" class="table-of-contents-event">Who can be on the team?</a>
+          <a href="#q3" class="table-of-contents-event">What is CHS S&D?</a>
+        </div>
+        <!-- Column 2: Competition -->
+        <div class="toc-column">
+          <a href="#sec-2" class="table-of-contents-section">Competition</a>
+          <a href="#q4" class="table-of-contents-event">How long is the season?</a>
+          <a href="#q5" class="table-of-contents-event">How do practices work?</a>
+          <a href="#q6" class="table-of-contents-event">What are League Tournaments?</a>
+          <a href="#q7" class="table-of-contents-event">What about Invitationals?</a>
+          <a href="#q8" class="table-of-contents-event">What to expect at a tournament?</a>
+        </div>
+        <!-- Column 3: Parents -->
+        <div class="toc-column">
+          <a href="#sec-3" class="table-of-contents-section">Parents</a>
+          <a href="#q9" class="table-of-contents-event">What can parents expect?</a>
+          <a href="#q10" class="table-of-contents-event">Is there a time commitment for parents?</a>
+          <a href="#q11" class="table-of-contents-event">How much does it cost?</a>
+        </div>
+        <!-- Column 4: Keeping Track -->
+        <div class="toc-column">
+          <a href="#sec-4" class="table-of-contents-section">Keeping Track Of Everything</a>
+          <a href="#q12" class="table-of-contents-event">How do I keep track?</a>
+          <a href="#q13" class="table-of-contents-event">What is NSDA?</a>
+          <a href="#q14" class="table-of-contents-event">What is Tabroom?</a>
+        </div>
+      </div>
+      <div style="height: 20px;"></div>
+    </div>
+    
+    <h2>Frequently Asked Questions and Answers</h2>
+    <div class="separator"></div>
+    <h3 id="sec-1">General</h3>
+    <h4 id="q1" style="color:rgb(100, 0, 180); margin: 10px 5vw;"><strong>What are the benefits of speech and debate?</strong></h4>
+    <h4>Speech & debate competition sharpens your ability to research and analyze problems, think and listen critically, express your thoughts clearly and fluently, and better understand current events. It increases your confidence and poise and provides constant intellectual stimulation. You will have opportunities to compete, to travel, and to develop friendships with other outstanding students. Many executives, lawyers, teachers, public relations officers, radio and television personalities, and prominent public figures testify to the benefits of their participation. Many of them found lifelong friends through their involvement. They also gained valuable skills for use in their careers.</h4>
+    <div class="spacer"></div>
+    <h4 id="q2" style="color:rgb(100, 0, 180); margin: 10px 5vw;"><strong>Who can be on the CHS Speech & Debate Team?</strong></h4>
+    <h4>Any CHS student who is in good standing. Teammates are expected to uphold the integrity of the CHS Speech & Debate Program with a positive attitude, dedication, teamwork and respect for themselves, their teammates, captains, coaches, judges and others.<br><br>Our team helps students of all abilities build confidence in public speaking regardless of their prior experience.</h4>
+    <div class="spacer"></div>
+    <h4 id="q3" style="color:rgb(100, 0, 180); margin: 10px 5vw;"><strong>What is CHS Speech and Debate?</strong></h4>
+    <h4>Carlsbad High School Speech & Debate is a highly competitive team of over 100 dedicated students. Similar to a track & field or swim team, Speech & Debate is both an individual and team activity where students compete in 17 events across 4 categories. Please explore events by clicking the button below.</h4>
+    <div class="spacer"></div>
+    <div style="text-align: center;">
+      <a href="events.html" class="purple-button">Events</a>
+    </div>
+    <div class="spacer"></div>
+    <h4>Speech & Debate provides a unique opportunity for students to build confidence and teaches them how to effectively express, modify, and justify an idea in a supportive, collaborative environment where they will create lifelong friendships. Novices are connected to Varsity mentors, event competitors bond though practices, and students attend multiple team building events throughout the year.<br><br>CHSSD competes in a series of tournaments throughout the academic year. We encourage students to take Oral Interpretation as a 9th grade elective, and Advanced Speech / Debate in subsequent years.</h4>
+    <div class="spacer"></div>
+    <h3 id="sec-2">Competition</h3>
+    <h4 id="q4" style="color:rgb(100, 0, 180); margin: 10px 5vw;"><strong>How long is the competition season?</strong></h4>
+    <h4>The competition season runs from September through June and includes a combination of League and Invitational tournaments. Varsity students often compete in March & April in State qualifiers and championships. We also regularly send students to National Championships in June. Practices resume over the summer to prepare for the next season.</h4>
+    <div class="spacer"></div>
+    <h4 id="q5" style="color:rgb(100, 0, 180); margin: 10px 5vw;"><strong>How do practices work?</strong></h4>
+    <h4>As with any highly competitive team activity, successful CHSSD competitors make a serious time commitment to the team. Varsity students begin practicing and team leadership meets to plan out the year in August. Novices begin practicing once the school year starts. Practices are grouped by event and held during lunch and after school over the week.<br><br>Students competing in multiple events can expect multiple practices per week. Typically, a student specializing in 2-3 events can expect to spend 2-6 hours per week in practice and working on their own to refine their speeches / cases. The time commitment is higher at the beginning of each year and potentially whenever new case topics are released for Debate events. There may be additional practices scheduled just before a tournament.</h4>
+    <div class="spacer"></div>
+    <h4 id="q6" style="color:rgb(100, 0, 180); margin: 10px 5vw;"><strong>What are League Tournaments?</strong></h4>
+    <h4>League tournaments are held on weekends throughout the school year. CHSSD is part of the <a href="http://sdivsl.weebly.com/">San Diego Imperial Valley Speech League (SDIVSL)</a>, which serves high schools in San Diego and Imperial Valley counties as the regional league of the <a href="http://www.chssa.org/">California High School Speech Association (CHSSA)</a>. CHSSA establishes the rules and chooses the debate topics and events for all high schools participating in competitive speech in California.<br><br>SDIVSL holds three (3) League tournament each year. Because there are so many events and students typically compete in more than one event, each tournament is divided into an A-B-C series over the course of three (3) weekends, totaling nine (9) League tournaments per year.<br><br><i>League 1A, 2A & 3A tournaments are Parli & PF Debate events. League 1B, 2B & 3B tournaments are Congress / LD / Policy Debate events. And League 1C, 2C & 3C tournaments are the Speech (IEs) events.</i><br><br>Participation in League tournaments are <b>required</b> / expected for all team members based on which events they specialize in. [For example, a student only specializing in Speech events would only be expected to attend series 3 League tournaments.]</h4>
+    <div class="spacer"></div>
+    <h4 id="q7" style="color:rgb(100, 0, 180); margin: 10px 5vw;"><strong>What about Invitational Tournaments?</strong></h4>
+    <h4>CHSSD routinely competes in the most prestigous Invitationals in the country. Invitational tournaments are <b>optional</b> and typically combine Speech & Debate events over a single weekend. Coach McCoy is solely responsible for determining which events interested students will compete in for Invitational tournaments.<br><br>For in-person Invitationals, there may be a small fee to cover travel costs. All information about participating in upcoming Invitationals is shared with STUDENTS. It is then up to each student to communicate with their parents to get permission forms etc. returned in time to allow them to participate.</h4>
+    <div class="spacer"></div>
+    <h4 id="q8" style="color:rgb(100, 0, 180); margin: 10px 5vw;"><strong>What can students expect during a tournament?</strong></h4>
+    <h4>League tournaments are held on Saturdays. For in-person tournaments, students should expect to arrive at the host school site typically around 7:30am and should bring everything they need to be there all day. Based on the number of entries, which type of tournament it is (A-B-C) and how well the student does, students can easily be there until 9 or 10pm. Please look at the <a href="https://docs.google.com/document/d/1FVyxc6YWnXNefCDeTzQlkZtwGYpofQecWIYQ-sxcDYM/edit?usp=sharing">Tournaments Page</a> for details on schedules, dress code, supplies, etc.<br><br>In-person League tournaments are typically on a high school campus. Students disperse into various classrooms with the other competitors and judges for each round of competition. They then return to a central team location and snack / catch up with teammates / get feedback from captains before going into their next round of competition. It’s a busy but rewarding time for competitors.<br><br>All students compete in preliminary rounds, while only students who ‘break’ compete in elimination rounds [see <a href="glossary.html">Glossary</a>]. Teammates are encouraged to stay and support their peers as CHSSD typically has finalists in League tournaments. The team also usually meets at a local restaurant for a celebratory get together afterwards.<br><br>For Invitationals, students are similarly busy all day, but competition usually starts on Friday night and can continue through Sunday afternoon / evening. Teammates typically stay at the tournament until the last teammate is done with elimination rounds. All scheduling for Invitationals will be communicated to students and parents through Coach McCoy and Tabroom.</h4>
+    <div class="spacer"></div>
+    <h3 id="sec-3">Parents</h3>
+    <h4 id="q9" style="color:rgb(100, 0, 180); margin: 10px 5vw;"><strong>What can parents expect during a tournament?</strong></h4>
+    <h4>Parents who are judging will be required to stay until released by the Judges Room Coordinator (applicable for in-person and virtual judging). Unlike athletic competitions, parents do <b>not</b> attend tournaments to ‘cheer’ on the kids for in-person tournaments. Parents should also try to refrain from texting / calling their students during in-person tournaments. Calls or texts can actually be detrimental if a student is speaking in a round because they use their phones to time themselves and connect with teammates during competition. Parents should establish times to connect with their students and stay tuned to our social media for updates during tournaments.<br><br>In-person Invitational tournaments typically require students to meet on a Thursday or Friday and travel together with parents who have volunteered to be chaperones / drivers.</h4>
+    <div class="spacer"></div>
+    <h4 id="q10" style="color:rgb(100, 0, 180); margin: 10px 5vw;"><strong>There's a time commitment for parents too?</strong></h4>
+    <h4>Yes! For every tournament we compete in, we are REQUIRED to bring volunteer judges in order to be eligible to compete. Parents should expect to volunteer to judge at League and virtual tournaments their students are competing in.<br><br>Chaperones and drivers are needed for in-person Invitational tournaments. Requests for these volunteers will be sent out by Coach Curtis prior to each Invitational. For more information please explore the <a href="#">Judges Page UPDATE LINK</a> for training, resources and more information about judging.<br><br>CHS also typically hosts 1-2 League tournaments every year. Volunteers are needed to help throughout the day with tournament set up, snack bar /grill, judges room, donations for food and supplies, and more. Coach Curtis and the Boosters will send out details for these tournaments to parents each year.</h4>
+    <div class="spacer"></div>
+    <h4 id="q11" style="color:rgb(100, 0, 180); margin: 10px 5vw;"><strong>How much does Speech & Debate cost?</strong></h4>
+    <h4>Total team costs usually exceed $80,000 per year for the team to enter League, Invitational, State and National tournaments. We ask each student’s family to contribute $300 at the beginning of each season. This one time donation is fully tax deductible and helps cover the costs of NSDA membership, tournament fees, team travel, tech fees, insurance, license fees, script fees and more. These costs add up quickly because many are charged <i>per competitor</i>, not <i>per team</i>. This is a one-time donation request, as compared to athletic club teams that charge a monthly participation fee.<br><br>Parents can also expect an initial investment at the beginning of the year for a professional outfit to compete in. The cost of a competition outfit can vary greatly depending on how much a student grows from year to year, personal taste, etc. We do have a limited supply of outfits students have donated available as well.<br><br>Other costs could be if students purchase lunch or snacks at in-person tournaments, and/or if you’d rather donate funds or supplies rather than volunteer your time during any CHS hosted in-person tournaments. Judges / chaperones / drivers also cover their own travel costs to tournaments.</h4>
+    <div class="spacer"></div>
+    <h3 id="sec-4">Keeping Track of Everything</h3>
+    <h4 id="q12" style="color:rgb(100, 0, 180); margin: 10px 5vw;"><strong>How do I keep track of what's happening in Speech & Debate?</strong></h4>
+    <h4>Along with confidence, research and public speaking skills, CHSSD teaches students responsibility, time management, and other essential life skills. All primary communication from Coach Curtis is to the team members directly - i.e. STUDENTS, not parents. Students will always have the most current information about what is happening in Speech & Debate, whether it's changes to the practice schedule, updates on tournaments, or anything else.<br><br>Bookmark this website! We do try to keep parents up to date through the website and our social media:</h4>
+    <h4><b>Team Instagram:</b> <a href="https://www.instagram.com/chs.speechdebate/">chs.speechdebate</a></h4>
+    <h4><b>Boosters Instagram:</b> <a href="https://www.instagram.com/chs.speechdebate.boosters/">chs.speechdebate.boosters</a></h4>
+    <h4><b>Facebook:</b> <a href="https://www.facebook.com/groups/SpeechDebateBoosters">Carlsbad High Speech and Debate Boosters</a> (private group)</h4>
+    <h4><b>Twitter (X):</b> <a href="https://twitter.com/chsspeechdebate?lang=en">@CHSSpeechDebate</a></h4>
+    <h4><br>And you can always email questions to <a href="mailto:mikendra.mccoy@carlsbadusd.net">Mrs. McCoy</a> and the <a href="https://checkout.square.site/merchant/JM5G9PAQSFXEM/checkout/EICFA27D6LEEGO2336CAWW4P">Boosters Board</a>. There are also two essential websites EVERY student and parent needs to have bookmarked to keep track of all info for Speech & Debate: <a href="http://www.speechanddebate.org/">NSDA</a> & <a href="https://www.tabroom.com/index/index.mhtml">Tabroom</a>.</h4>
+    <div class="spacer"></div>
+    <h4 id="q13" style="color:rgb(100, 0, 180); margin: 10px 5vw;"><strong>What is NSDA?</strong></h4>
+    <h4>The <a href="http://www.speechanddebate.org/">National Speech & Debate League (NSDA)</a> is a national organization which sponsors tournaments, workshops, and other speech programs which include national recognition for both students and coaches. Each June qualifiers from throughout America meet for a week-long competition to determine the best speakers in the nation.<br><br>Students accrue points for every speech or debate presented. When they have earned a minimum number of points, they are eligible to join NSDA. CHSSD covers this cost. Students keep track of their points / rankings in their NSDA account. Depending on their academic achievement and success in competition they may also be eligible to become an <strong>Academic All American</strong>. The Academic All American award recognizes high school students who have earned the degree of Superior Distinction (750 points); completed at least 5 semesters of high school; demonstrated outstanding character and leadership; and earned a GPA of 3.7 on a 4.0 scale (or its equivalent).</h4>
+    <div class="spacer"></div>
+    <h4 id="q14" style="color:rgb(100, 0, 180); margin: 10px 5vw;"><strong>What is Tabroom?</strong></h4>
+    <h4><a href="https://www.tabroom.com/index/index.mhtml">Tabroom</a> is a hub website run by NSDA that aggregates all tournament information nationally.</h4>
+    <h4><br>Students use their Tabroom accounts to keep track of all their Speech & Debate records and tournament logistics. Parents use Tabroom to keep track of their judging and can track how CHSSD is doing during a tournament. Keeping track of the schedule and important announcements for tournaments is essential for parents to be able to keep track of in-person tournaments so you don’t accidentally call your student when they are in a round!</h4>
+    <h4><br><strong>All virtual tournaments are run on Tabroom.</strong> Parents <strong>must</strong> have a Tabroom account to judge virtually.</h4>
+    <div class="spacer"></div>
+    <div class="separator"></div>
+
+    <script src="templates/headers/header.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        fetch("templates/headers/header.html")
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById("header-placeholder").innerHTML = data;
+            initializeHeader();
+          })
+          .catch(error => console.error('Error loading header:', error));
+      });
+    </script>
+  </body>
+</html>

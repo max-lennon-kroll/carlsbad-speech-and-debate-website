@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carlsbad Speech And Debate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="templates/headers/header.css" />
+    
+    <style>
+      body {
+        font-family: "Lexend", sans-serif;
+        background-color: white;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden;
+        background: url("https://www.transparenttextures.com/patterns/rough-cloth-light.png");
+      }
+      h1 {
+        color: rgb(255, 255, 255);
+        position: absolute;
+        text-shadow: 0px 0px 20px rgba(130, 0, 230);
+        font-size: 60px;
+        transform: translateX(50vw);
+        translate: -50%;
+        z-index: 3;
+        text-align: center;
+        padding: 0px 20px;
+      }
+      h2 {
+        color: rgb(150, 50, 255);
+        margin: 20px 4vw;
+        font-size: 30px;
+        font-weight: bolder;
+        text-align: center;
+      }
+      h3 {
+        color: rgb(100, 0, 180);
+        margin: 30px 3vw;
+        font-size: 24px;
+        font-weight: bolder;
+      }
+      h4 {
+        color: rgb(0, 0, 0);
+        margin: 0px 7vw;
+        font-size: 20px;
+        font-weight: normal;
+      }
+      a { user-select: none; }
+      .separator {
+        background-color: rgb(150, 50, 255);
+        width: calc(30% + 250px);
+        height: calc(1.5px + 0.1vw);
+        margin: 20px auto;
+        z-index: 1;
+      }
+      .spacer { height: 50px; width: 100%; margin: 0px; }
+      .image-container {
+        background: black;
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .header-image {
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+        object-position: center;
+        opacity: 0.4;
+      }
+      .icon {
+        background: rgb(100, 100, 100);
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+      }
+      .icon:hover { width: 53px; height: 53px; }
+      .purple-button {
+        display: inline-block;
+        margin: 0 auto;
+        background-color: rgb(130, 0, 230);
+        color: white;
+        text-decoration: none;
+        padding: 14px 28px;
+        font-size: 18px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+        box-shadow: 0 0 25px rgba(130, 0, 230, 0.7);
+        text-align: center;
+        line-height: normal;
+        vertical-align: middle;
+      }
+      .purple-button:hover {
+        background-color: rgb(170, 50, 255);
+        transform: scale(1.07);
+        box-shadow: 0 0 15px rgb(170, 50, 255);
+        text-shadow: 0 0 8px white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+
+    <!-- Header Image -->
+    <div class="image-container">
+      <img class="header-image" src="images/headers/img1.png">
+    </div>
+
+    <!-- Header -->
+    <h1 style="top: 200px;">Directions</h1>
+    <h2>Directions To Schools Hosting Tournaments</h2>
+    <div class="separator"></div>
+    <h3>These directions are for IN PERSON tournaments usually held at area schools.</h3>
+    <h4 style="margin: 10px 5vw;"><strong style="color:rgb(100, 0, 180);">Canyon Crest: </strong>5951 Village Center Loop Rd, San Diego, 92130</h4>
+    <h4><b>Directions: </b>From Interstate 5, exit Highway 56 east.  Take the Carmel Valley Road exit off the 56. Turn left (north) on Carmel Valley Road. Turn right at the sign that says Del Mar Heights Road (which is Village Center Loop Road, although there is currently no sign to indicate the name). CCA is on the right at the corner of Carmel Valley Road and Village Center Loop Road.</h4>
+    <div class="spacer"></div>
+    <h4 style="margin: 10px 5vw;"><strong style="color:rgb(100, 0, 180);">Carlsbad: </strong>3557 Lancer Way  Carlsbad, 92008</h4>
+    <h4><b>Directions: </b>I-5 North, exit Carlsbad Village Drive.  Turn right (east), to right on Monroe.  Monroe turns into Lancer Way. CHS will be on the right.  Go past the football field to the student lot on the corner of Lancer Way and Chestnut.</h4>
+    <div class="spacer"></div>
+    <h4 style="margin: 10px 5vw;"><strong style="color:rgb(100, 0, 180);">Grossmont College: </strong>8800 Grossmont College Dr., El Cajon, 92020</h4>
+    <h4><b>Directions: </b>Take I-5 to I-805 S / Chula Vista. Take I 805 S to State Road 52 E. Merge onto CA-52E for 11 miles. Take exit 15 for CA-125 S. From CA 125-S take exit 20B for Grossmont College Drive.The College will be on your right.</h4>
+    <div class="spacer"></div>
+    <h4 style="margin: 10px 5vw;"><strong style="color:rgb(100, 0, 180);">Helix Charter: </strong>7323 University Ave, La Mesa, 91942</h4>
+    <h4>Parking and campus access is best from the student parking lot, located at 4200 Lowell St.<br><b>Directions: </b>I-8 to the 70th St/Lake Murray Blvd exit. Turn right off the exit, but stay in the left lane. Turn left on 70th St. Turn left on University. Turn right on Lowell, then immediately right on Highlander Way. At the stop sign, turn left into the parking lot. Additional parking and bus parking is available in the student lot – pass Highlander Way, then pass tennis courts, baseball fields and basketball courts. Turn right into the student parking lot.</h4>
+    <div class="spacer"></div>
+    <h4 style="margin: 10px 5vw;"><strong style="color:rgb(100, 0, 180);">La Costa Canyon </strong>1 Maverick Way, Carlsbad, 92009</h4>
+    <h4><b>Directions: </b>From I-5, exit at Leucadia Blvd. and travel east approximately 2 miles.  After crossing El Camino Real, Leucadia Blvd. will merge with and change names to Rancho Santa Fe Rd. – continue ahead as it veers slightly to the left. Turn right on Camino De Los Coches. Travel another 1/2 mile & right into LCCHS.</h4>
+    <div class="spacer"></div>
+    <h4 style="margin: 10px 5vw;"><strong style="color:rgb(100, 0, 180);">Mission Vista: </strong>1306 Melrose Dr, Oceanside, 92057</h4>
+    <h4><b>Directions: </b>Take I- 5 North. Take <b>76 East</b>. School will be on your left (across from the Home Depot).<br>From the 15: Go north. Take the 76 west. School will be on your right.</h4>
+    <h4><b>DO NOT USE MAPQUEST - YOU WILL GET LOST. If you use any other mapping technology, it's better to search the school name, rather than the street address for the school. The route from the 5 is much more efficient, unless you are already in North County, right near the 15.</b></h4>
+    <div class="spacer"></div>
+    <h4 style="margin: 10px 5vw;"><strong style="color:rgb(100, 0, 180);">Rancho Bernardo: </strong>13010 Paseo Lucido, San Diego 92128</h4>
+    <h4><b>Directions: </b>Take I-5 to CA-56 E. Follow signs to merge onto CA-56 E. Use the right 2 lanes to turn right onto the I-15 N ramp. Take I-15 N to exit 22, Camino Del Norte. Use the right 2 lanes to turn right onto Camino Del Norte. In about 1/2 mile, turn left onto Paseo Lucido. School is on your right.</h4>
+    <div class="spacer"></div>
+    <h4 style="margin: 10px 5vw;"><strong style="color:rgb(100, 0, 180);">SAN DIEGUITO ACADEMY: </strong>800 Santa Fe Dr, Encinitas, 92024</h4>
+    <h4><b>Directions: </b>From I-5 Take the Santa Fe Dr. exit. Follow Santa Fe Drive east for about 1/2 mile. School will be on your left.</h4>
+    <div class="spacer"></div>
+    <h4 style="margin: 10px 5vw;"><strong style="color:rgb(100, 0, 180);">Torrey Pines: </strong>3710 Del Mar Heights Rd, San Diego, 92130</h4>
+    <h4><b>Directions: </b>Interstate 5 to Del Mar Heights Road, and go east one mile, past Carmel Country Road. The school is on the left.</h4>
+    <div class="spacer"></div>
+    <div class="separator"></div>
+
+    <!-- Scripts to load and initialize the header -->
+    <script src="templates/headers/header.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        fetch("templates/headers/header.html")
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById("header-placeholder").innerHTML = data;
+            initializeHeader();
+          })
+          .catch(error => console.error('Error loading header:', error));
+      });
+    </script>
+  </body>
+</html>

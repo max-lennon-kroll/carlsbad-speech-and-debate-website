@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carlsbad Speech And Debate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="templates/headers/header.css" />
+    
+    <style>
+      body {
+        font-family: "Lexend", sans-serif;
+        background-color: white;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden;
+        background: url("https://www.transparenttextures.com/patterns/rough-cloth-light.png");
+      }
+      h1 {
+        color: rgb(255, 255, 255);
+        position: absolute;
+        text-shadow: 0px 0px 20px rgba(130, 0, 230);
+        font-size: 60px;
+        transform: translateX(50vw);
+        translate: -50%;
+        z-index: 3;
+      }
+      h2 {
+        color: rgb(150, 50, 255);
+        margin: 20px 20px;
+        font-size: 30px;
+        font-weight: bolder;
+        text-align: center;
+      }
+      h3 {
+        color: rgb(8, 8, 8);
+        margin-left: 10px;
+        margin-top: 30px;
+        font-size: 23px;
+        font-weight: normal;
+      }
+      h4 {
+        color: rgb(8, 8, 8);
+        margin: 20px 20px;
+        font-size: 20px;
+        font-weight: lighter;
+        width: 80%;
+      }
+      a { user-select: none; }
+      .separator {
+        background-color: rgb(0, 0, 0);
+        width: 350px;
+        height: 2px;
+        z-index: 1;
+        margin: 10px 10px;
+      }
+      .spacer { height: 20px; width: 100%; margin: 0px; }
+      .image-container {
+        background: black;
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .header-image {
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+        object-position: center;
+        opacity: 0.4;
+      }
+      .icon {
+        background: rgb(100, 100, 100);
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+      }
+      .icon:hover { width: 53px; height: 53px; }
+      .student-img {
+        width: 300px;
+        height: 400px;
+        border-radius: 10px;
+        background-image: linear-gradient(to bottom right, rgb(200, 200, 200), rgb(80, 80, 80));
+        margin: 0; 
+        flex-shrink: 0;
+      }
+
+      .alumni-spotlight-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 40px;
+        max-width: 1000px;
+        margin: 40px auto;
+        padding: 0 20px;
+      }
+
+      .alumni-text-content {
+        flex-grow: 1;
+        max-width: 600px;
+      }
+
+      .alumni-text-content h4 {
+        width: 100%;
+        margin: 20px 0;
+      }
+      
+      .alumni-text-content h4:first-child {
+        margin-top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+
+    <!-- Header Image -->
+    <div class="image-container">
+      <img class="header-image" src="images/headers/img1.png">
+    </div>
+
+    <!-- Header -->
+    <h1 style="top: 200px;">Alumni</h1>
+
+    <h2>Spotlight</h2>
+
+    <!-- Patrick Mason -->
+    <div class="alumni-spotlight-item">
+        <div class="alumni-text-content">
+            <h4 style="font-weight: normal;">Patrick Mason</h4>
+            <h4>Hey, my name is Patrick Mason. I am currently a Political Science Public Service major at UC Davis planning to go to Law School. I also was on the speech and debate team for 4 years and was captain and president. Speech and Debate will always have a huge place in my heart, as it helped me find a community. Through speech and debate I have made life long friendships and have a wealth of memories. Additionally it has given me tangible skills, including communication, negotiation, confidence, and resilience. During my time my favorite event was Parliamentary debate, where I was captain for 2 years. Joining speech made a tremendous difference in my life, and I'm so thankful for the program.</h4>
+        </div>
+        <img class="student-img" src="/images/all/alumni/alum1.jpg">
+    </div>
+
+    <!-- Vassilios Dressios -->
+    <div class="alumni-spotlight-item">
+        <div class="alumni-text-content">
+            <h4 style="font-weight: normal;">Vassilios Dressios</h4>
+            <h4>My name is Vassilios, and right now I'm a first-year at Caltech studying chemistry! Speech and debate alike trained my critical-thinking skills to the point where I can listen to long technical presentations, and identify immediately both the gaps in my knowledge and in the presenter's logic. Communication skills in this way are critical, yet lacked, in the world of STEM.</h4>
+        </div>
+        <img class="student-img" src="/images/all/alumni/alum2.jpg">
+    </div>
+    <div class="spacer"></div>
+
+    <!-- Scripts to load and initialize the header -->
+    <script src="templates/headers/header.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        fetch("templates/headers/header.html")
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById("header-placeholder").innerHTML = data;
+            initializeHeader(); 
+          })
+          .catch(error => console.error('Error loading header:', error));
+      });
+    </script>
+  </body>
+</html>
